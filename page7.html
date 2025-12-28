@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>Bettie - 婚禮服務</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!-- all css file here -->
+    <link rel="stylesheet" href="assets/css/flatpickr.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+
+    <!-- Header area -->
+    <style>
+        .header {
+            box-shadow: 0 -0.2rem 1rem 0 #00000020;
+        }
+
+
+        @media (min-width: 992px) {
+
+            /* Primary menu */
+            .menu_link_inner>span,
+            .menu_angle {
+                transition: 0.5s ease;
+                pointer-events: none;
+            }
+
+            .menu_link:hover .menu_link_inner,
+            .dropdown.active_lg .menu_link_inner {
+                background: #fff;
+            }
+
+            .menu_link .en_menu {
+                transform: translateY(4rem);
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .menu_link:hover .en_menu,
+            .menu_link.active .en_menu,
+            .dropdown.active_lg .en_menu {
+                transform: translateY(0rem);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .menu_link:hover .ch_menu,
+            .menu_link.active .ch_menu,
+            .dropdown.active_lg .ch_menu {
+                transform: translateY(-4rem);
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .menu_link:hover .menu_angle,
+            .menu_link.active .menu_angle,
+            .dropdown.active_lg .menu_angle {
+                opacity: 1;
+                visibility: visible;
+                top: -1rem;
+            }
+
+            /* dropdown-wrapper */
+            .dropdown.active_lg .dropdown-content {
+                top: 100%;
+                opacity: 1;
+                visibility: visible;
+            }
+
+        }
+
+        @media (max-width: 991.98px) {
+
+            /* ======================= */
+            .menu_overlay {
+                width: 200vw;
+                height: 200vh;
+                content: "";
+                background: #ffffff;
+                position: fixed;
+                left: -200vw;
+                top: 50%;
+                transform: translateY(-50%);
+                border-radius: 0 50% 50% 0;
+                transition: all 1.5s cubic-bezier(0.68, 0, 0.27, 1.55);
+                z-index: 999;
+            }
+
+            .menu_active .menu_overlay {
+                left: -50vw;
+            }
+
+            #closeMenu,
+            .logo_dark {
+                display: none;
+            }
+
+            .menu_active #closeMenu,
+            .menu_active .logo_dark {
+                display: block;
+            }
+
+            .menu_active #openMenu,
+            .menu_active .logo_bright {
+                display: none;
+            }
+
+            /* menu_active */
+
+            .main_menu {
+                transition-delay: 0s;
+            }
+
+            .menu_active .main_menu {
+                left: 0;
+                transition-delay: 1s;
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+            }
+
+
+            /* active_sm */
+            .dropdown-content {
+                transition: max-height 0.8s ease;
+            }
+
+            .active_sm .dropdown-content {
+                max-height: 20rem;
+            }
+
+            .active_sm .arrow_down {
+                transform: rotate(180deg);
+            }
+
+
+
+
+
+            /* menu_link */
+            .menu_link_inner>span,
+            .menu_angle {
+                transition: 0.5s ease;
+                pointer-events: none;
+            }
+
+            .dropdown.active_sm .menu_link_inner {
+                background: #fff;
+            }
+
+            .menu_link .en_menu {
+                transform: translateY(4rem);
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .menu_link:hover .en_menu,
+            .dropdown.active_sm .en_menu {
+                transform: translateY(0rem);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .menu_link:hover .ch_menu,
+            .dropdown.active_sm .ch_menu {
+                transform: translateY(-4rem);
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .menu_link:hover .menu_angle,
+            .dropdown.active_sm .menu_angle {
+                opacity: 1;
+                visibility: visible;
+                top: -1rem;
+            }
+
+
+            .main_menu {
+                height: calc(100% - 7.5rem);
+                top: 7.5rem;
+                padding-bottom: 3rem;
+            }
+
+            .hamburgar_btn img {
+                filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(37deg) brightness(104%) contrast(101%);
+            }
+
+        }
+    </style>
+    <header class="header w-full sticky lg:h-[9.4rem] h-[7.5rem] bg-white flex items-center top-0 left-0 z-[1024]">
+        <div class="container">
+            <nav class="flex items-center justify-between">
+                <!-- logo -->
+                <div>
+                    <a href="index.html" class="lg:w-[12.93rem] w-[8rem] inline-block">
+                        <img src="assets/img/logo.svg" alt="" class="w-full">
+                    </a>
+                </div>
+                <div
+                    class="main_menu lg:pt-0 pt-[3.5rem] transition-all duration-500 lg:opacity-[1] opacity-0 lg:visible invisible lg:pointer-events-auto pointer-events-none lg:static fixed left-[-7rem] top-[7.5rem] lg:w-auto w-full bg-white lg:h-auto h-[calc(100%+7.5rem)] lg:overflow-visible overflow-auto">
+                    <div class="menu_container">
+                        <div class="primary_menu flex items-center justify-center">
+                            <ul
+                                class="lg:w-auto w-full flex lg:flex-row flex-col gap-y-[0rem] items-center justify-center gap-[5rem]">
+                                <li class="lg:w-fit w-full lg:border-b-[0rem] border-b border-b-[#ddd] relative">
+                                    <a href="about.html" class="menu_link lg:h-[9.4rem] h-[6.5rem] w-full flex items-center">
+                                        <div
+                                            class="menu_link_inner relative w-[7.7rem] h-[2.8rem] flex items-center justify-center">
+                                            <img src="assets/img/menu_angle.svg"
+                                                class="menu_angle w-[12rem] absolute top-[-2rem] opacity-[0] visibility-hidden"
+                                                alt="">
+                                            <span
+                                                class="ch_menu absolute block whitespace-nowrap font-tc tracking-[0.15em] text-[#000000] font-semibold">品牌故事</span>
+                                            <span
+                                                class="en_menu font-metal absolute block whitespace-nowrap text-[#AF913B] text-[2rem] font-normal tracking-[0em]">About</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="lg:w-fit w-full lg:border-b-[0rem] border-b border-b-[#ddd] dropdown relative">
+                                    <a href="#"
+                                        class="dropdown-btn menu_link lg:h-[9.4rem] h-[6.5rem] flex items-center lg:justify-start justify-between">
+                                        <div
+                                            class="menu_link_inner relative w-[7.7rem] h-[2.8rem] flex items-center justify-center">
+                                            <img src="assets/img/menu_angle.svg"
+                                                class="menu_angle w-[12rem] absolute top-[-2rem] opacity-[0] visibility-hidden"
+                                                alt="">
+                                            <span
+                                                class="ch_menu absolute block whitespace-nowrap font-tc tracking-[0.15em] text-[#000000] font-semibold">消息</span>
+                                            <span
+                                                class="en_menu font-metal absolute block whitespace-nowrap text-[#AF913B] text-[2rem] font-normal tracking-[0em]">News</span>
+                                        </div>
+                                        <img src="assets/img/arrow_down.svg"
+                                            class="arrow_down transition-all duration-800 w-[2.2rem] lg:hidden block"
+                                            alt="">
+                                    </a>
+                                    <div
+                                        class="dropdown-content lg:absolute static lg:left-[50%] lg:translate-x-[-50%] lg:top-[calc(100%+2rem)] transition-all duration-800 ease-in-out lg:opacity-0 lg:invisible lg:max-h-[100rem] max-h-[0] overflow-auto">
+                                        <ul class="lg:bg-[#5C141680] bg-[#f1f1f1] md:rounded-[0] rounded-[0.5rem]">
+                                            <li>
+                                                <a href="page3.html"
+                                                    class="text-[1.4rem] px-[4rem] whitespace-nowrap transition-[0.5s] lg:text-white text-black h-[4.8rem] flex items-center justify-center hover:opacity-[0.5] lg:border-b-[0] border-b-[0.1rem] border-b-[#ddd] lg:hover:text-[#AF913B] lg:hover:bg-[#303030]">拍婚紗$18,800(限額)</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="text-[1.4rem] px-[4rem] whitespace-nowrap transition-[0.5s] lg:text-white text-black h-[4.8rem] flex items-center justify-center hover:opacity-[0.5] lg:border-b-[0] border-b-[0.1rem] border-b-[#ddd] lg:hover:text-[#AF913B] lg:hover:bg-[#303030]">2025新款禮服試穿活動</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lg:w-fit w-full lg:border-b-[0rem] border-b border-b-[#ddd]">
+                                    <a href="page4.html" class="menu_link lg:h-[9.4rem] h-[6.5rem] w-full flex items-center">
+                                        <div
+                                            class="menu_link_inner relative w-[7.7rem] h-[2.8rem] flex items-center justify-center">
+                                            <img src="assets/img/menu_angle.svg"
+                                                class="menu_angle w-[12rem] absolute top-[-2rem] opacity-[0] visibility-hidden"
+                                                alt="">
+                                            <span
+                                                class="ch_menu absolute block whitespace-nowrap font-tc tracking-[0.15em] text-[#000000] font-semibold">婚紗禮服</span>
+                                            <span
+                                                class="en_menu font-metal absolute block whitespace-nowrap text-[#AF913B] text-[2rem] font-normal tracking-[0em]">Bridal</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="lg:w-fit w-full lg:border-b-[0rem] border-b border-b-[#ddd]">
+                                    <a href="#" class="menu_link lg:h-[9.4rem] h-[6.5rem] w-full flex items-center">
+                                        <div
+                                            class="menu_link_inner relative w-[7.7rem] h-[2.8rem] flex items-center justify-center">
+                                            <img src="assets/img/menu_angle.svg"
+                                                class="menu_angle w-[12rem] absolute top-[-2rem] opacity-[0] visibility-hidden"
+                                                alt="">
+                                            <span
+                                                class="ch_menu absolute block whitespace-nowrap font-tc tracking-[0.15em] text-[#000000] font-semibold">攝影作品</span>
+                                            <span
+                                                class="en_menu font-metal absolute block whitespace-nowrap text-[#AF913B] text-[2rem] font-normal tracking-[0em]">Gallery</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="lg:w-fit w-full lg:border-b-[0rem] border-b border-b-[#ddd]">
+                                    <a href="#" class="menu_link lg:h-[9.4rem] h-[6.5rem] w-full flex items-center">
+                                        <div
+                                            class="menu_link_inner relative w-[7.7rem] h-[2.8rem] flex items-center justify-center">
+                                            <img src="assets/img/menu_angle.svg"
+                                                class="menu_angle w-[12rem] absolute top-[-2rem] opacity-[0] visibility-hidden"
+                                                alt="">
+                                            <span
+                                                class="ch_menu absolute block whitespace-nowrap font-tc tracking-[0.15em] text-[#000000] font-semibold">婚禮服務</span>
+                                            <span
+                                                class="en_menu font-metal absolute block whitespace-nowrap text-[#AF913B] text-[2rem] font-normal tracking-[0em]">Wedding</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="lg:w-fit w-full lg:border-b-[0rem] border-b border-b-[#ddd]">
+                                    <a href="#" class="menu_link lg:h-[9.4rem] h-[6.5rem] w-full flex items-center">
+                                        <div
+                                            class="menu_link_inner relative w-[7.7rem] h-[2.8rem] flex items-center justify-center">
+                                            <img src="assets/img/menu_angle.svg"
+                                                class="menu_angle w-[12rem] absolute top-[-2rem] opacity-[0] visibility-hidden"
+                                                alt="">
+                                            <span
+                                                class="ch_menu absolute block whitespace-nowrap font-tc tracking-[0.15em] text-[#000000] font-semibold">好評推薦</span>
+                                            <span
+                                                class="en_menu font-metal absolute block whitespace-nowrap text-[#AF913B] text-[2rem] font-normal tracking-[0em]">Reviews</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="lg:w-fit w-full">
+                                    <a href="#" class="menu_link lg:h-[9.4rem] h-[6.5rem] w-full flex items-center">
+                                        <div
+                                            class="menu_link_inner relative w-[7.7rem] h-[2.8rem] flex items-center justify-center">
+                                            <img src="assets/img/menu_angle.svg"
+                                                class="menu_angle w-[12rem] absolute top-[-2rem] opacity-[0] visibility-hidden"
+                                                alt="">
+                                            <span
+                                                class="ch_menu absolute block whitespace-nowrap font-tc tracking-[0.15em] text-[#000000] font-semibold">比堤專欄</span>
+                                            <span
+                                                class="en_menu font-metal absolute block whitespace-nowrap text-[#AF913B] text-[2rem] font-normal tracking-[0em]">Blog</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="lg:hidden flex justify-center mt-[2rem]">
+                            <a href="#" class="btn">
+                                <img src="assets/img/calender.svg" class="w-[2.2rem]" alt="calender">
+                                聯絡我們
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- hamburgar button -->
+                <div class="header_right">
+                    <div class="lg:block hidden">
+                        <a href="#" class="btn">
+                            <img src="assets/img/calender.svg" class="w-[2.2rem]" alt="calender">
+                            聯絡我們
+                        </a>
+                    </div>
+                    <div class="group hamburgar_btn lg:hidden w-[4.5rem] h-[4.5rem] flex items-center justify-center">
+                        <button type="button"
+                            class="w-[4.5rem] h-[4.5rem] flex items-center justify-center bg-[#5C1416] border-none outline-none p-0 cursor-pointer rounded-[0.6rem]">
+                            <img src="assets/img/hamburgar.svg" alt=""
+                                class="group-[.active]:hidden w-[2.8rem] [filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(37deg) brightness(104%) contrast(101%);]"
+                                alt="icon">
+                            <img src="assets/img/close.svg"
+                                class="hidden group-[.active]:block w-[2.5rem] [filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(37deg) brightness(104%) contrast(101%);]"
+                                alt="icon">
+                        </button>
+                    </div>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+    <main class="overflow-hidden">
+
+        <!-- Banner area -->
+        <div class="banner relative">
+            <img src="assets/img/banner_reviews.png" class="w-full h-[38.4rem] object-cover" alt="banner">
+        </div>
+
+        <!-- Gallery area -->
+        <style>
+            .gallery_grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                gap: 0.3rem;
+            }
+
+            .gallery_grid .gallery_item {
+                overflow: hidden;
+            }
+
+            .gallery_grid .gallery_item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s ease;
+            }
+
+            .gallery_grid .gallery_item:hover img {
+                transform: scale(1.05);
+            }
+
+            .gallery_grid .gallery_center {
+                grid-column: 2 / 4;
+                grid-row: 1 / 2;
+                background: #000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+            }
+
+            .gallery_center .center_content {
+                text-align: center;
+                color: #fff;
+            }
+
+            .gallery_center .center_content h5 {
+                font-family: 'Metal', serif;
+                font-size: 2.4rem;
+                color: #fff;
+                margin-bottom: 2rem;
+                transition: color 0.3s ease;
+            }
+
+            .gallery_center .center_content h5:hover {
+                color: #AF913B;
+            }
+
+            .gallery_center .center_content .line {
+                width: 8rem;
+                height: 0.1rem;
+                background: #AF913B;
+                margin: 0 auto 1.5rem;
+            }
+
+            .gallery_center .center_content p {
+                font-size: 1.2rem;
+                color: #999;
+            }
+
+            /* 大圖項目 */
+            .gallery_grid .gallery_item.large {
+                grid-row: span 2;
+            }
+
+            .gallery_grid .gallery_item.wide {
+                grid-column: span 2;
+            }
+
+            @media (max-width: 991.98px) {
+                .gallery_grid {
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: auto;
+                }
+
+                .gallery_grid .gallery_center {
+                    grid-column: 1 / 3;
+                    grid-row: auto;
+                    min-height: 20rem;
+                }
+
+                .gallery_grid .gallery_item.large {
+                    grid-row: span 1;
+                }
+
+                .gallery_grid .gallery_item img {
+                    height: 25rem;
+                }
+            }
+
+            @media (max-width: 575.98px) {
+                .gallery_grid .gallery_item img {
+                    height: 18rem;
+                }
+            }
+        </style>
+        <div class="gallery_area pt-[13rem]">
+            <div class="container">
+                <div class="section_top w-fit mx-auto lg:mb-[6rem] md:mb-[4rem] mb-[3rem] text-center">
+                    <img src="assets/img/menu_angle.svg" class="w-[9.3rem] mx-auto" alt="">
+                    <div class="flex items-center justify-center">
+                        <h2 class="title1 mr-[0.5rem]">Wedding</h2>
+                        <span class="title2 font-tc">•</span> <p class="title2 font-tc">婚禮服務</p>
+                    </div>
+                </div>
+
+                <!-- Wedding Photography section -->
+                <div class="text-center mb-[4rem]">
+                    <h3 class="text-[2.4rem] text-[#AF913B] font-tc mb-[2rem]">婚禮攝影 Photography</h3>
+                    <p class="font-tc text-[#666] max-w-[60rem] mx-auto leading-[2]">
+                        婚禮是一生一次的珍貴時刻，每個笑容與淚水都彌足珍貴。<br>
+                        比堤婚紗以溫柔視角紀錄最真摯的瞬間，添筆豐富婚禮與幸福細節，<br>
+                        掌握清楚與燈光變化，捕捉屬於你們的感動畫面。
+                    </p>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="gallery_grid">
+                    <!-- Row 1 -->
+                    <div class="gallery_item">
+                        <a href="#">
+                            <img src="assets/img/wedding_gallery_1.png" alt="婚禮照">
+                        </a>
+                    </div>
+                    <div class="gallery_center">
+                        <div class="center_content">
+                            <h5>More <span class="inline-block transition-all duration-500">+</span></h5>
+                            <span class="line block"></span>
+                            <p>哲宇 ♥ 日曜</p>
+                        </div>
+                    </div>
+                    <div class="gallery_item">
+                        <a href="#">
+                            <img src="assets/img/wedding_gallery_2.png" alt="婚禮照">
+                        </a>
+                    </div>
+                    <div class="gallery_item">
+                        <a href="#">
+                            <img src="assets/img/wedding_gallery_3.png" alt="婚禮照">
+                        </a>
+                    </div>
+
+                    <!-- Row 2 & 3 -->
+                    <div class="gallery_item large">
+                        <a href="#">
+                            <img src="assets/img/wedding_gallery_4.png" alt="婚禮照">
+                        </a>
+                    </div>
+                    <div class="gallery_item">
+                        <a href="#">
+                            <img src="assets/img/wedding_gallery_5.png" alt="婚禮照">
+                        </a>
+                    </div>
+                    <div class="gallery_item">
+                        <a href="#">
+                            <img src="assets/img/wedding_gallery_6.png" alt="婚禮照">
+                        </a>
+                    </div>
+                    <div class="gallery_item large">
+                        <a href="#">
+                            <img src="assets/img/wedding_gallery_7.png" alt="婚禮照">
+                        </a>
+                    </div>
+                    <div class="gallery_item">
+                        <a href="#">
+                            <img src="assets/img/wedding_gallery_8.png" alt="婚禮照">
+                        </a>
+                    </div>
+                    <div class="gallery_item">
+                        <a href="#">
+                            <img src="assets/img/wedding_gallery_9.png" alt="婚禮照">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- reserve area -->
+        <div class="reserve_area pt-[13rem]">
+            <div class="container">
+                <div class="section_top w-fit mx-auto lg:mb-[8rem] md:mb-[5rem] mb-[3rem] text-center">
+                    <img src="assets/img/menu_angle.svg" class="w-[9.3rem] mx-auto" alt="">
+                    <div class="flex items-center justify-center">
+                        <h2 class="title1 mr-[0.5rem]">Reserve Now</h2>
+                        <span class="title2 font-tc">•</span> <p class="title2 font-tc">立即預約參觀</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#F8F8F8] py-[6rem] px-[2.5rem] w-full rounded-[5rem]">
+                    <div class="max-w-[98rem] mx-auto">
+                        <div class="max-w-[60rem] mx-auto">
+                            <p class="mb-[4rem]">親愛的比堤婚紗貴賓您好：
+                                請填寫以下資料，讓我們為您安排貼心的服務，專屬顧問將盡快與您聯繫。
+                                若不便接聽電話，也可點選下方按鈕加入<a href="#"
+                                    class="inline-block text-[#AF913B] hover:text-black transition-all duration-300">比堤官方LINE</a>
+                                ，與我們直接聯繫唷！</p>
+
+                            <div class="text-center">
+                                <a href="#" class="btn yellow">
+                                    <img src="assets/img/line_icon.svg" class="w-[2.8rem]" alt="line_icon">
+                                    預約試穿
+                                </a>
+                            </div>
+                        </div>
+                        <span
+                            class="block mt-[4rem] lg:mb-[6rem] md:mb-[3rem] mb-[2rem]  h-[0.1rem] w-full bg-[#AF913B]"></span>
+                        <div class="max-w-[31rem] mx-auto">
+                            <p class="text-[2.4rem] text-[#000000] mb-[3rem] text-center">最新活動</p>
+                            <ul>
+                                <li class="leading-[3rem]">•最新 100+款婚紗 來店免費試穿 3 套</li>
+                                <li class="leading-[3rem]">•單拍婚紗照 $18,800(限額 10 組)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact area -->
+        <div class="contact_area pt-[4rem] pb-[15.4rem]">
+            <div class="container">
+                <form action="POST"
+                    class="contact_form relative border border-[#AF913B] rounded-[5rem] lg:px-[23.5rem] md:px-[5rem] px-[2.5rem] lg:py-[7.5rem] md:py-[5rem] py-[3.5rem] grid md:grid-cols-2 grid-cols-1 lg:gap-[10rem] md:gap-[4rem] gap-[2rem] md:gap-y-[4rem] gap-y-[2rem]">
+                    <div class="grid lg:gap-y-[4rem] md:gap-y-[2rem] gap-y-[1.5rem]  content-start">
+                        <div class="form_group">
+                            <label for="name" class="text-[2rem] text-black block mb-[1.5rem]"><span
+                                    class="text-[#AF913B]">*</span>姓名
+                                NAME</label>
+                            <input type="text" name="name" id="name"
+                                class="ml-[1.1rem] bg-[#F8F8F8] h-[4.8rem] rounded-[1.5rem] text-center px-[2rem] w-full flex items-center justify-center outline-none border-[#F8F8F8] focus:border-[#AF913B] text-[#AF913B]"
+                                required>
+                        </div>
+                        <div class="form_group">
+                            <label for="select" class="text-[2rem] text-black block mb-[1.5rem]">方便聯絡時間</label>
+                            <select
+                                class="nice-select ml-[1.1rem] bg-[#F8F8F8] h-[4.8rem] rounded-[1.5rem] text-center px-[2rem] w-full flex items-center justify-center outline-none border-[#F8F8F8] focus:border-[#AF913B]"
+                                name="select" id="select">
+                                <option value="選擇時段" selected>選擇時段</option>
+                                <option value="上午">上午</option>
+                                <option value="下午">下午</option>
+                                <option value="晚上">晚上</option>
+                                <option value="清晨">清晨</option>
+                                <option value="中午">中午</option>
+                                <option value="深夜">深夜</option>
+                                <option value="全天">全天</option>
+                            </select>
+                        </div>
+                        <div class="form_group">
+                            <label for="select" class="text-[2rem] text-black block mb-[1.5rem]">希望諮詢的服務項目(可複選)</label>
+                            <div class="checkbox_lists grid gap-[1.2rem]">
+                                <div class="checkbox cursor-pointer flex gap-[1rem] active">
+                                    <div
+                                        class="check mt-[0.3rem] size-[1.8rem] border border-[#4D4D4D] flex items-center justify-center">
+                                        <img src="assets/img/check.svg" class="w-[1rem]" alt="">
+                                    </div>
+                                    <p>新款禮服預約試穿</p>
+                                </div>
+                                <div class="checkbox cursor-pointer flex gap-[1rem] active">
+                                    <div
+                                        class="check mt-[0.3rem] size-[1.8rem] border border-[#4D4D4D] flex items-center justify-center">
+                                        <img src="assets/img/check.svg" class="w-[1rem]" alt="">
+                                    </div>
+                                    <p>結婚包套</p>
+                                </div>
+                                <div class="checkbox cursor-pointer flex gap-[1rem]">
+                                    <div
+                                        class="check mt-[0.3rem] size-[1.8rem] border border-[#4D4D4D] flex items-center justify-center">
+                                        <img src="assets/img/check.svg" class="w-[1rem]" alt="">
+                                    </div>
+                                    <p>婚紗單拍$18,800(限額 10 組)</p>
+                                </div>
+                                <div class="checkbox cursor-pointer flex gap-[1rem]">
+                                    <div
+                                        class="check mt-[0.3rem] size-[1.8rem] border border-[#4D4D4D] flex items-center justify-center">
+                                        <img src="assets/img/check.svg" class="w-[1rem]" alt="">
+                                    </div>
+                                    <p>禮服單租</p>
+                                </div>
+                                <div class="checkbox cursor-pointer flex gap-[1rem]">
+                                    <div
+                                        class="check mt-[0.3rem] size-[1.8rem] border border-[#4D4D4D] flex items-center justify-center">
+                                        <img src="assets/img/check.svg" class="w-[1rem]" alt="">
+                                    </div>
+                                    <p>個人寫真</p>
+                                </div>
+                                <div class="checkbox cursor-pointer flex gap-[1rem]">
+                                    <div
+                                        class="check mt-[0.3rem] size-[1.8rem] border border-[#4D4D4D] flex items-center justify-center">
+                                        <img src="assets/img/check.svg" class="w-[1rem]" alt="">
+                                    </div>
+                                    <p>情侶寫真</p>
+                                </div>
+                                <div class="checkbox cursor-pointer flex gap-[1rem]">
+                                    <div
+                                        class="check mt-[0.3rem] size-[1.8rem] border border-[#4D4D4D] flex items-center justify-center">
+                                        <img src="assets/img/check.svg" class="w-[1rem]" alt="">
+                                    </div>
+                                    <p>閨蜜寫真</p>
+                                </div>
+                                <div class="checkbox cursor-pointer flex gap-[1rem]">
+                                    <div
+                                        class="check mt-[0.3rem] size-[1.8rem] border border-[#4D4D4D] flex items-center justify-center">
+                                        <img src="assets/img/check.svg" class="w-[1rem]" alt="">
+                                    </div>
+                                    <p>其他(請在備註欄位填寫)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid lg:gap-y-[4rem] md:gap-y-[2rem] gap-y-[1.5rem] content-start">
+                        <div class="form_group">
+                            <label for="tel" class="text-[2rem] text-black block mb-[1.5rem]"><span
+                                    class="text-[#AF913B]">*</span>聯絡電話 Tel</label>
+                            <input type="text" name="tel" id="tel"
+                                class="ml-[1.1rem] bg-[#F8F8F8] h-[4.8rem] rounded-[1.5rem] text-center px-[2rem] w-full flex items-center justify-center outline-none border-[#F8F8F8] focus:border-[#AF913B] text-[#AF913B]"
+                                required>
+                        </div>
+                        <div class="form_group">
+                            <label for="selectDate" class="text-[2rem] text-black block mb-[1.5rem]"><span
+                                    class="text-[#AF913B]"></span>預計婚期</label>
+                            <input type="text" name="selectDate" id="selectDate" placeholder="DD / MM / YY"
+                                class="ml-[1.1rem] bg-[#F8F8F8] h-[4.8rem] rounded-[1.5rem] text-center px-[2rem] w-full flex items-center justify-center outline-none border-[#F8F8F8] focus:border-[#AF913B] text-[#AF913B] placeholder:text-[#AF913B]"
+                                required>
+                        </div>
+                        <div class="form_group">
+                            <label for="selectDate2" class="text-[2rem] text-black block mb-[1.5rem]"><span
+                                    class="text-[#AF913B]"></span>希望來店參觀日期(可複選)</label>
+                            <input type="text" name="selectDate2" id="selectDate2" placeholder="DD / MM / YY"
+                                class="ml-[1.1rem] bg-[#F8F8F8] h-[4.8rem] rounded-[1.5rem] text-center px-[2rem] w-full flex items-center justify-center outline-none border-[#F8F8F8] focus:border-[#AF913B] text-[#AF913B] placeholder:text-[#AF913B]"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="form_group md:col-span-2">
+                        <label for="message" class="text-[2rem] text-black block mb-[1.5rem]"><span
+                                class="text-[#AF913B]">備註</label>
+                        <textarea
+                            class="pt-[1.5rem] ml-[1.1rem] bg-[#F8F8F8] h-[9.6rem] rounded-[1.5rem] text-center px-[2rem] w-full flex items-center justify-center outline-none border-[#F8F8F8] focus:border-[#AF913B] text-[#AF913B]"
+                            name="message" id="message" required></textarea>
+                    </div>
+
+                    <div
+                        class="md:col-span-2 flex items-center justify-center mt-[4rem] lg:mb-[-10.5rem] md:mb-[-8rem] mb-[-6rem] mx-auto lg:gap-[10rem] md:gap-[6rem] gap-[1.5rem]">
+                        <a href="#" class="btn black">重新填寫</a>
+                        <a href="#" class="btn">確認送出</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Bitti area -->
+        <div class="bittie_area pt-[7.5rem] pb-[9rem]"
+            style="background: url(assets/img/bitti_bg.png) scroll no-repeat top center / cover;">
+            <div class="container">
+
+                <div class="section_top w-fit mx-auto lg:mb-[6rem] md:mb-[3rem] mb-[2rem]  text-center">
+                    <img src="assets/img/menu_angle.svg" class="w-[9.3rem] mx-auto" alt="">
+                    <p class="text-[3.2rem] text-[#5C1416] font-semibold">比堤的三大「超」寵愛</p>
+                </div>
+
+                <div class="grid lg:grid-cols-3 grid-cols-1 gap-y-[5rem]">
+                    <div class="text-center">
+                        <img src="assets/img/biti1.svg" class="w-[15.5rem] block mx-auto" alt="">
+                        <p class="text-center text-[#AF913B] text-[2rem] semi-bold md:my-[4rem] my-[2rem]">超罩新娘後盾</p>
+                        <ul class="text-start w-fit mx-auto">
+                            <li class="leading-[1.6]">•專業禮服職人 1 對 1 導覽婚紗禮服</li>
+                            <li class="leading-[1.6]">•婚顧貼身服務，隨時陪伴身旁</li>
+                            <li class="leading-[1.6]">•攝影專業團隊，量身打造專屬風格</li>
+                            <li class="leading-[1.6]">•專業新娘秘書，韓系妝感，自然通透</li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <img src="assets/img/biti2.svg" class="w-[15.5rem] block mx-auto" alt="">
+                        <p class="text-center text-[#AF913B] text-[2rem] semi-bold md:my-[4rem] my-[2rem]">超強硬體設備</p>
+                        <ul class="text-start w-fit mx-auto">
+                            <li class="leading-[1.6]">•一站式服務，拍照＋禮服＋新秘＋婚攝一次搞定</li>
+                            <li class="leading-[1.6]">•百坪獨家棚景，打造高質感拍攝場景</li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <img src="assets/img/biti3.svg" class="w-[15.5rem] block mx-auto" alt="">
+                        <p class="text-center text-[#AF913B] text-[2rem] semi-bold md:my-[4rem] my-[2rem]">超甜拍攝優惠</p>
+                        <ul class="text-start w-fit mx-auto">
+                            <li class="leading-[1.6]">•價格透明無隱藏：一價到底更放心</li>
+                            <li class="leading-[1.6]">•結婚拍攝專案，享有最新優惠折扣</li>
+                            <li class="leading-[1.6]">•高自由度，量身打造專屬婚禮方案</li>
+                            <li class="leading-[1.6]">•超高品質服務，網友好評推薦不斷</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- footer section start -->
+    <footer>
+
+        <div class="footer_top pt-[7rem] pb-[4.5rem] bg-[#303030]">
+            <div
+                class="container grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-y-[5rem] gap-y-[0] items-center">
+                <div class="w-full md:mb-0 mb-[3.5rem]">
+                    <a href="#" class="md:block flex justify-center">
+                        <img src="assets/img/logo-2.svg" class="lg:w-[25.1rem] w-[22rem]" alt="">
+                    </a>
+                    <div class="flex items-center md:justify-start justify-center gap-[1.5rem] mt-[4rem]">
+                        <a href="#"
+                            class="group size-[4.5rem] flex items-center justify-center rounded-full border border-[#FFFFFF] hover:border-[#AF913B]">
+                            <svg class="w-[2.3rem]" width="23" height="23" viewBox="0 0 23 23" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.3901 5.54706C8.15864 5.54706 5.55214 8.15356 5.55214 11.385C5.55214 14.6165 8.15864 17.223 11.3901 17.223C14.6215 17.223 17.228 14.6165 17.228 11.385C17.228 8.15356 14.6215 5.54706 11.3901 5.54706ZM11.3901 15.1804C9.30184 15.1804 7.59466 13.4783 7.59466 11.385C7.59466 9.29168 9.29676 7.58958 11.3901 7.58958C13.4834 7.58958 15.1855 9.29168 15.1855 11.385C15.1855 13.4783 13.4783 15.1804 11.3901 15.1804ZM18.8285 5.30826C18.8285 6.06531 18.2188 6.66994 17.4668 6.66994C16.7098 6.66994 16.1052 6.06023 16.1052 5.30826C16.1052 4.55629 16.7149 3.94658 17.4668 3.94658C18.2188 3.94658 18.8285 4.55629 18.8285 5.30826ZM22.6951 6.69026C22.6087 4.86622 22.1921 3.2505 20.8558 1.91931C19.5246 0.588113 17.9089 0.17148 16.0848 0.080024C14.2049 -0.0266747 8.57019 -0.0266747 6.69026 0.080024C4.8713 0.166399 3.25558 0.583032 1.91931 1.91423C0.583032 3.24542 0.17148 4.86114 0.080024 6.68518C-0.0266747 8.56511 -0.0266747 14.1998 0.080024 16.0798C0.166399 17.9038 0.583032 19.5195 1.91931 20.8507C3.25558 22.1819 4.86622 22.5985 6.69026 22.69C8.57019 22.7967 14.2049 22.7967 16.0848 22.69C17.9089 22.6036 19.5246 22.187 20.8558 20.8507C22.187 19.5195 22.6036 17.9038 22.6951 16.0798C22.8018 14.1998 22.8018 8.57019 22.6951 6.69026ZM20.2664 18.0969C19.8701 19.0927 19.1029 19.8599 18.1019 20.2613C16.6031 20.8558 13.0465 20.7186 11.3901 20.7186C9.73372 20.7186 6.17201 20.8507 4.67823 20.2613C3.68238 19.865 2.91516 19.0978 2.51377 18.0969C1.91931 16.598 2.05649 13.0414 2.05649 11.385C2.05649 9.72864 1.92439 6.16693 2.51377 4.67315C2.91008 3.6773 3.67729 2.91008 4.67823 2.50869C6.17709 1.91423 9.73372 2.05141 11.3901 2.05141C13.0465 2.05141 16.6082 1.91931 18.1019 2.50869C19.0978 2.905 19.865 3.67221 20.2664 4.67315C20.8609 6.17201 20.7237 9.72864 20.7237 11.385C20.7237 13.0414 20.8609 16.6031 20.2664 18.0969Z"
+                                    class="fill-white group-hover:fill-[#AF913B] transition-colors duration-300" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="group size-[4.5rem] flex items-center justify-center rounded-full border border-[#FFFFFF] hover:border-[#AF913B]">
+                            <svg class="w-[1.2rem]" width="12" height="22" viewBox="0 0 12 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.9921 12.3541L11.6021 8.37933H7.78822V5.79999C7.78822 4.71257 8.32099 3.65261 10.0291 3.65261H11.763V0.26853C11.763 0.26853 10.1895 0 8.68518 0C5.54433 0 3.49132 1.90373 3.49132 5.35001V8.37933H0V12.3541H3.49132V21.9628H7.78822V12.3541H10.9921Z"
+                                    class="fill-white group-hover:fill-[#AF913B] transition-colors duration-300" />
+                            </svg>
+                        </a>
+                        <a href="#" class="btn yellow">
+                            <img src="assets/img/line_icon.svg" class="w-[2.8rem]" alt="line_icon">
+                            預約試穿
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <ul class="lg:w-fit whitespace-nowrap w-[40rem] mx-auto">
+                        <li class="leading-[2.5] text-[#AF913B]">
+                            Tel｜ <a href="#"
+                                class="inline-block transition-all duration-300 text-white hover:text-[#AF913B]">(04)2238
+                                - 4234</a>
+                        </li>
+                        <li class="leading-[2.5] text-[#AF913B]">
+                            E-mail｜ <a href="#"
+                                class="inline-block transition-all duration-300 text-white hover:text-[#AF913B]">beattie22384234@gmail.com</a>
+                        </li>
+                        <li class="leading-[2.5] text-[#AF913B]">
+                            Address｜ <span class="inline-block text-white">台中市北屯區崇德路一段548號 前往導航</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full">
+                    <ul class="lg:w-fit whitespace-nowrap w-[40rem] mx-auto">
+                        <li class="leading-[2.5] text-[#AF913B] flex">
+                            Time｜ <span class="transition-all duration-300 text-white hover:text-[#AF913B]">週一至週三
+                                12:00～22:00<br>週五至週日 10:00～22:00<br>週四公休</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="copywrite text-center bg-black py-[1.2rem] text-white text-[1.2rem]">
+            <div class="container">
+                <p>Copyright © Beattie 比提婚紗攝影 2025. All Rights Reserved Design by 鴻羽網路</p>
+            </div>
+        </div>
+
+    </footer>
+    <!-- footer section end -->
+
+
+    <!-- fixed buttons -->
+    <style>
+        .got_to_top:not(.scrolled_up) {
+            height: 0;
+            opacity: 0;
+            visibility: hidden;
+            margin-top: 0;
+        }
+    </style>
+    <div class="flex items-center flex-col fixed z-50 md:right-[4rem]  right-[2rem] md:bottom-[4rem] bottom-[2rem]">
+        <a href="#"
+            class="group size-[4.5rem] bg-black hover:bg-[#AF913B] transition-all duration-300 flex items-center justify-center rounded-full border border-black hover:border-[#AF913B]">
+            <svg class="w-[2.3rem]" width="23" height="23" viewBox="0 0 23 23" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M11.3901 5.54706C8.15864 5.54706 5.55214 8.15356 5.55214 11.385C5.55214 14.6165 8.15864 17.223 11.3901 17.223C14.6215 17.223 17.228 14.6165 17.228 11.385C17.228 8.15356 14.6215 5.54706 11.3901 5.54706ZM11.3901 15.1804C9.30184 15.1804 7.59466 13.4783 7.59466 11.385C7.59466 9.29168 9.29676 7.58958 11.3901 7.58958C13.4834 7.58958 15.1855 9.29168 15.1855 11.385C15.1855 13.4783 13.4783 15.1804 11.3901 15.1804ZM18.8285 5.30826C18.8285 6.06531 18.2188 6.66994 17.4668 6.66994C16.7098 6.66994 16.1052 6.06023 16.1052 5.30826C16.1052 4.55629 16.7149 3.94658 17.4668 3.94658C18.2188 3.94658 18.8285 4.55629 18.8285 5.30826ZM22.6951 6.69026C22.6087 4.86622 22.1921 3.2505 20.8558 1.91931C19.5246 0.588113 17.9089 0.17148 16.0848 0.080024C14.2049 -0.0266747 8.57019 -0.0266747 6.69026 0.080024C4.8713 0.166399 3.25558 0.583032 1.91931 1.91423C0.583032 3.24542 0.17148 4.86114 0.080024 6.68518C-0.0266747 8.56511 -0.0266747 14.1998 0.080024 16.0798C0.166399 17.9038 0.583032 19.5195 1.91931 20.8507C3.25558 22.1819 4.86622 22.5985 6.69026 22.69C8.57019 22.7967 14.2049 22.7967 16.0848 22.69C17.9089 22.6036 19.5246 22.187 20.8558 20.8507C22.187 19.5195 22.6036 17.9038 22.6951 16.0798C22.8018 14.1998 22.8018 8.57019 22.6951 6.69026ZM20.2664 18.0969C19.8701 19.0927 19.1029 19.8599 18.1019 20.2613C16.6031 20.8558 13.0465 20.7186 11.3901 20.7186C9.73372 20.7186 6.17201 20.8507 4.67823 20.2613C3.68238 19.865 2.91516 19.0978 2.51377 18.0969C1.91931 16.598 2.05649 13.0414 2.05649 11.385C2.05649 9.72864 1.92439 6.16693 2.51377 4.67315C2.91008 3.6773 3.67729 2.91008 4.67823 2.50869C6.17709 1.91423 9.73372 2.05141 11.3901 2.05141C13.0465 2.05141 16.6082 1.91931 18.1019 2.50869C19.0978 2.905 19.865 3.67221 20.2664 4.67315C20.8609 6.17201 20.7237 9.72864 20.7237 11.385C20.7237 13.0414 20.8609 16.6031 20.2664 18.0969Z"
+                    class="fill-white  transition-colors duration-300" />
+            </svg>
+        </a>
+        <a href="#"
+            class="group md:mt-[1.5rem] mt-[0.8rem] size-[4.5rem] bg-black hover:bg-[#AF913B] transition-all duration-300 flex items-center justify-center rounded-full border border-black hover:border-[#AF913B]">
+            <svg class="w-[1.2rem]" width="12" height="22" viewBox="0 0 12 22" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M10.9921 12.3541L11.6021 8.37933H7.78822V5.79999C7.78822 4.71257 8.32099 3.65261 10.0291 3.65261H11.763V0.26853C11.763 0.26853 10.1895 0 8.68518 0C5.54433 0 3.49132 1.90373 3.49132 5.35001V8.37933H0V12.3541H3.49132V21.9628H7.78822V12.3541H10.9921Z"
+                    class="fill-white  transition-colors duration-300" />
+            </svg>
+        </a>
+        <a href="#"
+            class="group md:mt-[1.5rem] mt-[0.8rem] size-[4.5rem] bg-black hover:bg-[#AF913B] transition-all duration-300 flex items-center justify-center rounded-full border border-black hover:border-[#AF913B]">
+
+            <svg class="w-[2.8rem]" width="28" height="27" viewBox="0 0 28 27" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M11.7092 22.8359C13.3466 23.1929 13.1588 23.8007 12.7908 26.0341C12.7307 26.3912 12.5054 27.4319 14 26.8014C15.4946 26.1709 22.059 22.0002 25.0032 18.5817C27.0311 16.3255 28 14.0388 28 11.5091V11.4939C28 5.1582 21.7135 0 14 0C6.28648 0 0 5.1582 0 11.4939C0 17.1687 4.97961 21.9319 11.7092 22.8359ZM19.1373 8.70589C19.1373 8.54636 19.2725 8.42481 19.4152 8.42481H23.3358C23.4861 8.42481 23.6062 8.56155 23.6137 8.70589V9.69347C23.6137 9.85301 23.4936 9.97455 23.3358 9.97455H20.6695V11.0153H23.3358C23.4936 11.0153 23.6137 11.1369 23.6137 11.2964V12.2916C23.6137 12.4511 23.4936 12.5726 23.3358 12.5726H20.6695V13.6058H23.3358C23.4936 13.6058 23.6137 13.7274 23.6137 13.8869V14.8821C23.6137 15.0416 23.4936 15.1631 23.3358 15.1631H19.4152C19.2575 15.1631 19.1373 15.0264 19.1373 14.8821V8.70589ZM12.3777 8.71349C12.3777 8.55396 12.4979 8.43241 12.6556 8.43241H13.6245C13.7071 8.43241 13.8047 8.47799 13.8498 8.55396L16.6513 12.3751V8.71349C16.6513 8.55396 16.7715 8.43241 16.9292 8.43241H17.9056C18.0633 8.42481 18.191 8.55396 18.191 8.6983V8.70589V14.8821C18.191 15.0416 18.0708 15.1631 17.9131 15.1631H16.9367C16.8391 15.1631 16.7564 15.11 16.7114 15.0492L13.9099 11.228V14.8897C13.9099 15.0492 13.7897 15.1707 13.632 15.1707H12.6556C12.4979 15.1707 12.3777 15.0492 12.3777 14.8897V8.71349ZM9.89914 8.70589C9.89914 8.54636 10.0193 8.42481 10.177 8.42481H11.1534C11.3112 8.42481 11.4313 8.56155 11.4313 8.70589V14.8821C11.4313 15.0416 11.3112 15.1631 11.1534 15.1631H10.177C10.0193 15.1631 9.89914 15.0416 9.89914 14.8821V8.70589ZM4.58906 8.70589C4.58906 8.54636 4.70923 8.42481 4.86695 8.42481H5.84335C6.00107 8.42481 6.12124 8.54636 6.12124 8.70589V13.5982H8.78755C8.93026 13.5982 9.05043 13.735 9.05043 13.8793V14.8669C9.05043 15.0264 8.93026 15.148 8.77253 15.148H4.85193C4.77682 15.148 4.71674 15.1176 4.66416 15.072C4.61159 15.0188 4.58906 14.958 4.58906 14.8821V8.70589Z"
+                    class="fill-white ] transition-colors duration-300" />
+            </svg>
+
+        </a>
+
+        <!-- got_to_top -->
+        <button
+            class="group md:mt-[1.5rem] mt-[0.8rem] got_to_top overflow-hidden cursor-pointer size-[4.5rem] bg-white hover:bg-[#AF913B] transition-all duration-300 flex items-center justify-center rounded-full border border-[#AF913B]">
+
+            <svg class="w-[1.6rem]" width="16" height="8" viewBox="0 0 16 8" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 7L8 1L0.999999 7" stroke="#AF913B" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="stroke-[#AF913B] group-hover:stroke-white transition-colors duration-300" />
+            </svg>
+
+        </button>
+    </div>
+
+    <!-- menu_overlay -->
+    <div class="menu_overlay"></div>
+
+    <!-- all js file here -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/nice-select.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/flatpickr.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
