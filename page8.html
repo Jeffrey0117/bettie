@@ -17,151 +17,156 @@
     <link rel="stylesheet" href="assets/css/swiper.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Override styles for reviews section -->
+    <!-- Google Fonts for reviews section -->
+    <link href="https://fonts.googleapis.com/css2?family=Metal&family=Noto+Sans+HK:wght@100..900&family=Noto+Serif+TC:wght@200..900&display=swap" rel="stylesheet">
+
+    <!-- Reviews section styles (from page-02 style.css) -->
     <style>
         .reviews-area {
-            padding: 160px 0;
+            background: #ffffff;
+            padding: 200px 0;
         }
-        .reviews-title {
-            text-align: center;
-            margin-bottom: 60px;
-            position: relative;
+        .reviews-area .container {
+            max-width: 1480px;
+            margin: 0 auto;
+            padding: 0 15px;
         }
-        .reviews-title img {
-            width: 93px;
-            margin: 0 auto 10px;
-        }
-        .reviews-title h2 {
-            font-family: "Metal", serif;
-            color: #AF913B;
-            font-size: 48px;
-            font-weight: 400;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-        .reviews-title h2 span {
-            font-family: "Noto Serif TC";
-            color: #000;
-            font-size: 24px;
-            font-weight: 600;
-            letter-spacing: 2.4px;
+        .reviews-main {
+            max-width: 1332px;
+            margin: auto;
         }
         .reviews-flex {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            column-gap: 59px;
+            margin-top: 80px;
+            row-gap: 60px;
+        }
+        .reviews-title {
+            text-align: center;
+        }
+        .reviews-title img {
+            max-width: 93px;
+            margin-left: 31px;
+        }
+        .reviews-title h2 {
+            font-family: "Metal", serif;
+            font-weight: 400;
+            font-size: 64px;
+            color: #000000;
+            text-align: center;
+            line-height: 51px;
+            margin-top: 6px;
+        }
+        .reviews-title h2 span {
+            font-family: "Noto Serif TC", serif;
+            font-weight: 600;
+            font-size: 32px;
+            color: #AF913B;
         }
         .reviews-item {
-            background: #fff;
-            border: 1px solid #ddd;
-            transition: all 0.3s ease;
-        }
-        .reviews-item:hover {
-            border-color: #5C1416;
-        }
-        .reviews-img {
-            overflow: hidden;
+            border: 1px solid #AF913B;
+            border-radius: 50px;
         }
         .reviews-img img {
             width: 100%;
-            height: 220px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-        .reviews-item:hover .reviews-img img {
-            transform: scale(1.05);
+            border-radius: 50px 50px 0 0;
         }
         .reviews-cnt {
-            padding: 20px;
+            padding: 25px 25px 55px 25px;
         }
         .reviews-cnt h2 {
-            font-family: "Noto Serif TC";
-            font-size: 16px;
+            font-family: "Noto Serif TC", serif;
             font-weight: 600;
-            color: #5C1416;
-            line-height: 1.6;
-            margin-bottom: 15px;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
+            font-size: 20px;
+            line-height: 30px;
         }
         .reviews-cnt h2 a {
-            color: inherit;
+            color: #AF913B;
+            transition: 0.2s all ease;
             text-decoration: none;
         }
-        .reviews-date {
-            margin-bottom: 15px;
+        .reviews-cnt h2:hover a {
+            color: #E3242B;
         }
         .reviews-date ul {
-            display: flex;
+            display: grid;
+            grid-template-columns: 80% auto;
             align-items: center;
-            justify-content: flex-end;
-            gap: 10px;
+            column-gap: 11px;
+            justify-content: space-around;
             list-style: none;
             padding: 0;
             margin: 0;
         }
         .reviews-date ul li {
             font-family: "Metal", serif;
+            font-weight: 400;
+            font-size: 16px;
             color: #AF913B;
-            font-size: 14px;
         }
         .reviews-date ul li span {
-            display: block;
-            width: 30px;
+            width: 100%;
             height: 1px;
             background: #AF913B;
-        }
-        .reviews-list {
-            margin-bottom: 20px;
+            display: block;
         }
         .reviews-list ul {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
             list-style: none;
             padding: 0;
             margin: 0;
         }
         .reviews-list ul li {
-            font-family: "Noto Serif TC";
-            font-size: 12px;
-            color: #666;
-            line-height: 1.8;
-        }
-        .reviews-btn {
-            text-align: center;
+            font-family: "Noto Sans HK", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            color: #4D4D4D;
         }
         .reviews-btn a {
             font-family: "Metal", serif;
+            font-weight: 400;
+            font-size: 24px;
+            color: #ffffff;
             display: block;
-            padding: 12px 20px;
-            border: 1px solid #5C1416;
-            color: #5C1416;
-            font-size: 14px;
-            font-style: italic;
+            padding: 26px 10px 28px 10px;
+            background: #5C1416;
+            border-radius: 0 0 50px 50px;
+            text-align: center;
+            transition: 0.2s all ease;
             text-decoration: none;
-            transition: all 0.3s ease;
         }
         .reviews-btn a:hover {
-            background: #5C1416;
-            color: #fff;
+            background: #303030;
+            color: #AF913B;
         }
 
-        @media (max-width: 991px) {
+        /* Responsive */
+        @media screen and (min-width: 768px) and (max-width: 991px) {
             .reviews-flex {
                 grid-template-columns: repeat(2, 1fr);
+                row-gap: 40px;
+                column-gap: 30px;
             }
-        }
-        @media (max-width: 767px) {
             .reviews-area {
-                padding: 80px 0;
-            }
-            .reviews-flex {
-                grid-template-columns: 1fr;
+                padding: 100px 0;
             }
             .reviews-title h2 {
-                font-size: 32px;
+                font-size: 45px;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            .reviews-flex {
+                grid-template-columns: 100%;
+                row-gap: 40px;
+            }
+            .reviews-area {
+                padding: 70px 0;
+            }
+            .reviews-title h2 {
+                font-size: 45px;
             }
         }
     </style>
