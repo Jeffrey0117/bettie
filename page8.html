@@ -16,6 +16,155 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/swiper.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Override styles for reviews section -->
+    <style>
+        .reviews-area {
+            padding: 160px 0;
+        }
+        .reviews-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        .reviews-title img {
+            width: 93px;
+            margin: 0 auto 10px;
+        }
+        .reviews-title h2 {
+            font-family: "Metal", serif;
+            color: #AF913B;
+            font-size: 48px;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .reviews-title h2 span {
+            font-family: "Noto Serif TC";
+            color: #000;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 2.4px;
+        }
+        .reviews-flex {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .reviews-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            transition: all 0.3s ease;
+        }
+        .reviews-item:hover {
+            border-color: #5C1416;
+        }
+        .reviews-img {
+            overflow: hidden;
+        }
+        .reviews-img img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .reviews-item:hover .reviews-img img {
+            transform: scale(1.05);
+        }
+        .reviews-cnt {
+            padding: 20px;
+        }
+        .reviews-cnt h2 {
+            font-family: "Noto Serif TC";
+            font-size: 16px;
+            font-weight: 600;
+            color: #5C1416;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .reviews-cnt h2 a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .reviews-date {
+            margin-bottom: 15px;
+        }
+        .reviews-date ul {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .reviews-date ul li {
+            font-family: "Metal", serif;
+            color: #AF913B;
+            font-size: 14px;
+        }
+        .reviews-date ul li span {
+            display: block;
+            width: 30px;
+            height: 1px;
+            background: #AF913B;
+        }
+        .reviews-list {
+            margin-bottom: 20px;
+        }
+        .reviews-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .reviews-list ul li {
+            font-family: "Noto Serif TC";
+            font-size: 12px;
+            color: #666;
+            line-height: 1.8;
+        }
+        .reviews-btn {
+            text-align: center;
+        }
+        .reviews-btn a {
+            font-family: "Metal", serif;
+            display: block;
+            padding: 12px 20px;
+            border: 1px solid #5C1416;
+            color: #5C1416;
+            font-size: 14px;
+            font-style: italic;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .reviews-btn a:hover {
+            background: #5C1416;
+            color: #fff;
+        }
+
+        @media (max-width: 991px) {
+            .reviews-flex {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 767px) {
+            .reviews-area {
+                padding: 80px 0;
+            }
+            .reviews-flex {
+                grid-template-columns: 1fr;
+            }
+            .reviews-title h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -436,176 +585,283 @@
 
     <main class="overflow-hidden">
 
-        <!-- Reviews area -->
-        <div class="reviews_area pt-[13rem] pb-[10rem]">
+        <!-- reviews-area start -->
+        <section class="reviews-area">
             <div class="container">
-                <div class="section_top w-fit mx-auto lg:mb-[6rem] md:mb-[4rem] mb-[3rem] text-center">
-                    <img src="assets/img/menu_angle.svg" class="w-[9.3rem] mx-auto" alt="">
-                    <div class="flex items-center justify-center">
-                        <h2 class="title1 mr-[0.5rem]">Reviews</h2>
-                        <span class="title2 font-tc">•</span> <p class="title2 font-tc">好評推薦</p>
+                <div class="reviews-main">
+                    <div class="reviews-title">
+                        <img src="images/circle.png" alt="">
+                        <h2>Reviews <span>• 好評推薦</span></h2>
                     </div>
-                </div>
+                    <div class="reviews-flex">
 
-                <!-- Reviews Grid - 9 cards -->
-                <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[2rem]">
-
-                    <!-- Card 1 -->
-                    <div class="review_card">
-                        <img src="assets/img/Bridal_img1.png" alt="" class="card_img">
-                        <div class="card_content">
-                            <p class="card_title">攝影師拍攝婚紗照非常專業，拍出來照片都很好看</p>
-                            <p class="card_date">2023-07-29</p>
-                            <div class="card_meta">
-                                <p>門市顧問｜Phoebe(菲比)</p>
-                                <p>攝影師｜Erin</p>
-                                <p>攝影助理｜Tammy</p>
-                                <p>造型師｜振宏</p>
-                                <p>禮服秘書｜怡玟</p>
+                        <div class="reviews-item">
+                            <div class="reviews-img">
+                               <a href="#">
+                                    <img src="images/reviews1.png" alt="">
+                               </a>
                             </div>
-                            <a href="#" class="read_more_btn">Read More</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="review_card">
-                        <img src="assets/img/Bridal_img2.png" alt="" class="card_img">
-                        <div class="card_content">
-                            <p class="card_title">女攝影師在拍攝過程中輕鬆愉快，不會感到不自在</p>
-                            <p class="card_date">2023-07-15</p>
-                            <div class="card_meta">
-                                <p>門市顧問｜凱婷</p>
-                                <p>攝影師｜Min</p>
-                                <p>攝影助理｜Polly</p>
-                                <p>造型師｜Penny</p>
-                                <p>禮服秘書｜怡玟</p>
+                            <div class="reviews-cnt">
+                                <h2><a href="#">攝影師拍攝婚紗照非常專業，拍出來照片 都很好看</a></h2>
+                                <div class="reviews-date">
+                                     <ul>
+                                        <li><span></span></li>
+                                        <li>2025-07-20</li>
+                                    </ul>
+                                </div>
+                               <div class="reviews-list">
+                                   <ul>
+                                       <li>門市顧問｜Phoebe(菲比)</li>
+                                       <li>攝影師｜Erin</li>
+                                       <li>攝影助理｜Tammy</li>
+                                       <li>燈光師｜維尼</li>
+                                       <li>禮服秘書｜怡妏</li>
+                                   </ul>
+                               </div>
                             </div>
-                            <a href="#" class="read_more_btn">Read More</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="review_card">
-                        <img src="assets/img/Bridal_img4.png" alt="" class="card_img">
-                        <div class="card_content">
-                            <p class="card_title">拍攝婚紗照前的溝通，會先跟攝影師說想要的風格</p>
-                            <p class="card_date">2023-07-15</p>
-                            <div class="card_meta">
-                                <p>門市顧問｜Phoebe</p>
-                                <p>攝影師｜Peggy</p>
-                                <p>攝影助理｜彥廷</p>
-                                <p>造型師｜Penny</p>
-                                <p>禮服秘書｜淘婷</p>
+                            <div class="reviews-btn">
+                                <a href="#">Read More</a>
                             </div>
-                            <a href="#" class="read_more_btn">Read More</a>
                         </div>
-                    </div>
 
-                    <!-- Card 4 -->
-                    <div class="review_card">
-                        <img src="assets/img/Bridal_img5.png" alt="" class="card_img">
-                        <div class="card_content">
-                            <p class="card_title">婚紗攝影是一個非常愉快且輕鬆的體驗，謝謝比堤</p>
-                            <p class="card_date">2023-07-10</p>
-                            <div class="card_meta">
-                                <p>門市顧問｜Phoebe(菲比)</p>
-                                <p>攝影師｜Ricky</p>
-                                <p>攝影助理｜喜喜</p>
-                                <p>造型師｜Penny</p>
-                                <p>禮服秘書｜仔仔</p>
+                        <div class="reviews-item">
+                            <div class="reviews-img">
+                               <a href="#">
+                                    <img src="images/reviews1.png" alt="">
+                               </a>
                             </div>
-                            <a href="#" class="read_more_btn">Read More</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 5 -->
-                    <div class="review_card">
-                        <img src="assets/img/Bridal_img1.png" alt="" class="card_img">
-                        <div class="card_content">
-                            <p class="card_title">婚紗拍攝心得（推薦比堤婚紗～真的都太好看了）</p>
-                            <p class="card_date">2023-06-26</p>
-                            <div class="card_meta">
-                                <p>門市顧問｜欣玲</p>
-                                <p>攝影師｜Min</p>
-                                <p>攝影助理｜Polly</p>
-                                <p>造型師｜Lushi</p>
-                                <p>禮服秘書｜紅茶</p>
+                            <div class="reviews-cnt">
+                                <h2><a href="#">女攝影師在拍攝過程中輕鬆愉快，不會感 到不自在</a></h2>
+                                <div class="reviews-date">
+                                     <ul>
+                                        <li><span></span></li>
+                                        <li>2025-07-16</li>
+                                    </ul>
+                                </div>
+                               <div class="reviews-list">
+                                   <ul>
+                                       <li>門市顧問｜凱婷</li>
+                                       <li>攝影師｜Min</li>
+                                       <li>攝影助理｜Polly</li>
+                                       <li>造型師｜Penny</li>
+                                       <li>禮服秘書｜怡妏</li>
+                                   </ul>
+                               </div>
                             </div>
-                            <a href="#" class="read_more_btn">Read More</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 6 -->
-                    <div class="review_card">
-                        <img src="assets/img/Bridal_img2.png" alt="" class="card_img">
-                        <div class="card_content">
-                            <p class="card_title">婚博展中詢問幾家婚紗，比堤的CP值真的是最高的</p>
-                            <p class="card_date">2023-06-17</p>
-                            <div class="card_meta">
-                                <p>門市顧問｜凱婷</p>
-                                <p>攝影師｜Ricky</p>
-                                <p>攝影助理｜喜喜</p>
-                                <p>造型師｜Penny</p>
-                                <p>禮服秘書｜恬攸</p>
+                            <div class="reviews-btn">
+                                <a href="#">Read More</a>
                             </div>
-                            <a href="#" class="read_more_btn">Read More</a>
                         </div>
-                    </div>
 
-                    <!-- Card 7 -->
-                    <div class="review_card">
-                        <img src="assets/img/Bridal_img4.png" alt="" class="card_img">
-                        <div class="card_content">
-                            <p class="card_title">化妝師都好厲害，化妝好漂亮，讓我可以美美的拍照</p>
-                            <p class="card_date">2023-06-10</p>
-                            <div class="card_meta">
-                                <p>門市顧問｜Phoebe</p>
-                                <p>攝影師｜Min</p>
-                                <p>攝影助理｜Polly</p>
-                                <p>造型師｜Lushi</p>
-                                <p>禮服秘書｜紅茶</p>
+                        <div class="reviews-item">
+                            <div class="reviews-img">
+                               <a href="#">
+                                    <img src="images/reviews1.png" alt="">
+                               </a>
                             </div>
-                            <a href="#" class="read_more_btn">Read More</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 8 -->
-                    <div class="review_card">
-                        <img src="assets/img/Bridal_img5.png" alt="" class="card_img">
-                        <div class="card_content">
-                            <p class="card_title">選婚紗時，禮服秘書非常專業又貼心，挑選適合的婚紗</p>
-                            <p class="card_date">2023-06-04</p>
-                            <div class="card_meta">
-                                <p>門市顧問｜凱婷</p>
-                                <p>攝影師｜Ricky</p>
-                                <p>攝影助理｜喜喜</p>
-                                <p>造型師｜Penny</p>
-                                <p>禮服秘書｜仔仔</p>
+                            <div class="reviews-cnt">
+                                <h2><a href="#">拍攝婚紗照前的溝通，會先跟攝影師說想 要的風格</a></h2>
+                                <div class="reviews-date">
+                                     <ul>
+                                        <li><span></span></li>
+                                        <li>2025-07-20</li>
+                                    </ul>
+                                </div>
+                               <div class="reviews-list">
+                                   <ul>
+                                       <li>門市顧問｜Phoebe</li>
+                                       <li>攝影師｜Peggy</li>
+                                       <li>攝影助理｜彥騰</li>
+                                       <li>造型師｜Penny</li>
+                                       <li>禮服秘書｜涴婷</li>
+                                   </ul>
+                               </div>
                             </div>
-                            <a href="#" class="read_more_btn">Read More</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 9 -->
-                    <div class="review_card">
-                        <img src="assets/img/Bridal_img1.png" alt="" class="card_img">
-                        <div class="card_content">
-                            <p class="card_title">婚宴這邊也是找比堤造型師，實在是太美了又細心</p>
-                            <p class="card_date">2023-06-12</p>
-                            <div class="card_meta">
-                                <p>門市顧問｜Phoebe</p>
-                                <p>攝影師｜Erin</p>
-                                <p>攝影助理｜Tammy</p>
-                                <p>造型師｜振宏</p>
-                                <p>禮服秘書｜怡玟</p>
+                            <div class="reviews-btn">
+                                <a href="#">Read More</a>
                             </div>
-                            <a href="#" class="read_more_btn">Read More</a>
                         </div>
-                    </div>
 
+                        <div class="reviews-item">
+                            <div class="reviews-img">
+                               <a href="#">
+                                    <img src="images/reviews1.png" alt="">
+                               </a>
+                            </div>
+                            <div class="reviews-cnt">
+                                <h2><a href="#">婚紗攝影是一個非常愉快且輕鬆的體驗，謝謝比堤</a></h2>
+                                <div class="reviews-date">
+                                     <ul>
+                                        <li><span></span></li>
+                                        <li>2025-07-10</li>
+                                    </ul>
+                                </div>
+                               <div class="reviews-list">
+                                   <ul>
+                                       <li>門市顧問｜Phoebe(菲比)</li>
+                                       <li>攝影師｜Ricky</li>
+                                       <li>攝影助理｜薇薇</li>
+                                       <li>燈光師｜維尼</li>
+                                       <li>造型師｜Penny</li>
+                                   </ul>
+                               </div>
+                            </div>
+                            <div class="reviews-btn">
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="reviews-item">
+                            <div class="reviews-img">
+                               <a href="#">
+                                    <img src="images/reviews1.png" alt="">
+                               </a>
+                            </div>
+                            <div class="reviews-cnt">
+                                <h2><a href="#">婚博展中詢問幾家後，比堤的ＣＰ值真的 是最高的</a></h2>
+                                <div class="reviews-date">
+                                     <ul>
+                                        <li><span></span></li>
+                                        <li>2025-06-26</li>
+                                    </ul>
+                                </div>
+                               <div class="reviews-list">
+                                   <ul>
+                                       <li>門市顧問｜凱婷</li>
+                                       <li>攝影師｜Ricky</li>
+                                       <li>攝影助理｜薇薇</li>
+                                       <li>造型師｜Penny</li>
+                                       <li>禮服秘書｜怡妏</li>
+                                   </ul>
+                               </div>
+                            </div>
+                            <div class="reviews-btn">
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="reviews-item">
+                            <div class="reviews-img">
+                               <a href="#">
+                                    <img src="images/reviews1.png" alt="">
+                               </a>
+                            </div>
+                            <div class="reviews-cnt">
+                                <h2><a href="#">化妝師超好聊，化妝好厲害，讓我可以美 美的拍照</a></h2>
+                                <div class="reviews-date">
+                                     <ul>
+                                        <li><span></span></li>
+                                        <li>2025-06-10</li>
+                                    </ul>
+                                </div>
+                               <div class="reviews-list">
+                                   <ul>
+                                       <li>門市顧問｜Phoebe(菲比)</li>
+                                       <li>攝影師｜Erin</li>
+                                       <li>攝影助理｜維尼</li>
+                                       <li>錄影師｜LuLu</li>
+                                       <li>禮服秘書｜怡妏</li>
+                                   </ul>
+                               </div>
+                            </div>
+                            <div class="reviews-btn">
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="reviews-item">
+                            <div class="reviews-img">
+                               <a href="#">
+                                    <img src="images/reviews1.png" alt="">
+                               </a>
+                            </div>
+                            <div class="reviews-cnt">
+                                <h2><a href="#">選婚紗時，禮服祕書專業又貼心，挑選適 合的婚紗</a></h2>
+                                <div class="reviews-date">
+                                     <ul>
+                                        <li><span></span></li>
+                                        <li>2025-01-19</li>
+                                    </ul>
+                                </div>
+                               <div class="reviews-list">
+                                   <ul>
+                                       <li>門市顧問｜欣玲</li>
+                                       <li>攝影師｜Ricky</li>
+                                       <li>攝影助理｜薇薇</li>
+                                       <li>錄影師｜LuLu</li>
+                                       <li>造型師｜妙姝</li>
+                                       <li>禮服秘書｜怡妏</li>
+                                   </ul>
+                               </div>
+                            </div>
+                            <div class="reviews-btn">
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="reviews-item">
+                            <div class="reviews-img">
+                               <a href="#">
+                                    <img src="images/reviews1.png" alt="">
+                               </a>
+                            </div>
+                            <div class="reviews-cnt">
+                                <h2><a href="#">婚宴造型也是找比堤造型師，實在是太美 了又細心</a></h2>
+                                <div class="reviews-date">
+                                     <ul>
+                                        <li><span></span></li>
+                                        <li>2025-07-20</li>
+                                    </ul>
+                                </div>
+                               <div class="reviews-list">
+                                   <ul>
+                                       <li>門市顧問｜凱婷</li>
+                                       <li>攝影師｜Peggy</li>
+                                       <li>攝影助理｜彥騰</li>
+                                       <li>造型師｜Penny</li>
+                                       <li>禮服秘書｜怡妏</li>
+                                   </ul>
+                               </div>
+                            </div>
+                            <div class="reviews-btn">
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="reviews-item">
+                            <div class="reviews-img">
+                               <a href="#">
+                                    <img src="images/reviews1.png" alt="">
+                               </a>
+                            </div>
+                            <div class="reviews-cnt">
+                                <h2><a href="#">攝影師拍攝婚紗照非常專業，拍出來照片 都很好看</a></h2>
+                                <div class="reviews-date">
+                                     <ul>
+                                        <li><span></span></li>
+                                        <li>2025-07-20</li>
+                                    </ul>
+                                </div>
+                               <div class="reviews-list">
+                                   <ul>
+                                       <li>門市顧問｜Phoebe(菲比)</li>
+                                       <li>攝影師｜Erin</li>
+                                       <li>攝影助理｜Tammy</li>
+                                       <li>燈光師｜維尼</li>
+                                       <li>禮服秘書｜怡妏</li>
+                                   </ul>
+                               </div>
+                            </div>
+                            <div class="reviews-btn">
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <!-- reviews-area end -->
 
         <!-- reserve area -->
         <div class="reserve_area pt-[13rem]">
