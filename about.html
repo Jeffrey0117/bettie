@@ -210,13 +210,14 @@
                     </a>
                 </div>
                 <div
-                    class="main_menu lg:pt-0 pt-[3.5rem] transition-all duration-500 lg:opacity-[1] opacity-0 lg:visible invisible lg:pointer-events-auto pointer-events-none lg:static fixed left-[-7rem] top-[7.5rem] lg:w-auto w-full bg-white lg:h-auto h-[calc(100%+7.5rem)] lg:overflow-visible overflow-auto">
+                    class="main_menu lg:pt-0 pt-[3.5rem] transition-all duration-500 lg:opacity-[1] opacity-0 lg:visible invisible lg:pointer-events-auto pointer-events-none lg:static fixed left-[-7rem] top-[7.5rem] lg:w-auto w-full bg-white lg:h-auto h-[calc(100%+7.5rem)] lg:overflow-visible overflow-auto scrollbar_none">
                     <div class="menu_container">
                         <div class="primary_menu flex items-center justify-center">
                             <ul
                                 class="lg:w-auto w-full flex lg:flex-row flex-col gap-y-[0rem] items-center justify-center gap-[5rem]">
                                 <li class="lg:w-fit w-full lg:border-b-[0rem] border-b border-b-[#ddd] relative">
-                                    <a href="about.html" class="menu_link active lg:h-[9.4rem] h-[6.5rem] w-full flex items-center">
+                                    <a href="about.html"
+                                        class="menu_link lg:h-[9.4rem] h-[6.5rem] w-full flex items-center">
                                         <div
                                             class="menu_link_inner relative w-[7.7rem] h-[2.8rem] flex items-center justify-center">
                                             <img src="assets/img/menu_angle.svg"
@@ -229,7 +230,8 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li class="lg:w-fit w-full lg:border-b-[0rem] border-b border-b-[#ddd] dropdown relative">
+                                <li
+                                    class="lg:w-fit w-full lg:border-b-[0rem] border-b border-b-[#ddd] dropdown relative">
                                     <a href="#"
                                         class="dropdown-btn menu_link lg:h-[9.4rem] h-[6.5rem] flex items-center lg:justify-start justify-between">
                                         <div
@@ -248,14 +250,15 @@
                                     </a>
                                     <div
                                         class="dropdown-content lg:absolute static lg:left-[50%] lg:translate-x-[-50%] lg:top-[calc(100%+2rem)] transition-all duration-800 ease-in-out lg:opacity-0 lg:invisible lg:max-h-[100rem] max-h-[0] overflow-auto">
-                                        <ul class="lg:bg-[#5C141680] bg-[#f1f1f1] md:rounded-[0] rounded-[0.5rem]">
+                                        <ul
+                                            class="lg:bg-[rgba(92,20,22,0.9)] bg-[#f1f1f1] md:rounded-[0] rounded-[0.5rem]">
                                             <li>
                                                 <a href="#"
-                                                    class="text-[1.4rem] px-[4rem] whitespace-nowrap transition-[0.5s] lg:text-white text-black h-[4.8rem] flex items-center justify-center hover:opacity-[0.5] lg:border-b-[0] border-b-[0.1rem] border-b-[#ddd] lg:hover:text-[#AF913B] lg:hover:bg-[#303030]">拍婚紗$18,800(限額)</a>
+                                                    class="text-[1.4rem] font-tc px-[4rem] whitespace-nowrap transition-[0.5s] lg:text-white text-black h-[4.8rem] flex items-center justify-center hover:opacity-[0.5] lg:border-b-[0] border-b-[0.1rem] border-b-[#ddd] lg:hover:text-[#AF913B] lg:hover:bg-[#303030]">拍婚紗$18,800(限額)</a>
                                             </li>
                                             <li>
                                                 <a href="#"
-                                                    class="text-[1.4rem] px-[4rem] whitespace-nowrap transition-[0.5s] lg:text-white text-black h-[4.8rem] flex items-center justify-center hover:opacity-[0.5] lg:border-b-[0] border-b-[0.1rem] border-b-[#ddd] lg:hover:text-[#AF913B] lg:hover:bg-[#303030]">2025新款禮服試穿活動</a>
+                                                    class="text-[1.4rem] font-tc px-[4rem] whitespace-nowrap transition-[0.5s] lg:text-white text-black h-[4.8rem] flex items-center justify-center hover:opacity-[0.5] lg:border-b-[0] border-b-[0.1rem] border-b-[#ddd] lg:hover:text-[#AF913B] lg:hover:bg-[#303030]">2025新款禮服試穿活動</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -274,8 +277,10 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li class="lg:w-fit w-full lg:border-b-[0rem] border-b border-b-[#ddd]">
-                                    <a href="#" class="menu_link lg:h-[9.4rem] h-[6.5rem] w-full flex items-center">
+                                 <li
+                                    class="lg:w-fit w-full lg:border-b-[0rem] border-b border-b-[#ddd] dropdown relative">
+                                    <a href="#"
+                                        class="dropdown-btn menu_link lg:h-[9.4rem] h-[6.5rem] flex items-center lg:justify-start justify-between">
                                         <div
                                             class="menu_link_inner relative w-[7.7rem] h-[2.8rem] flex items-center justify-center">
                                             <img src="assets/img/menu_angle.svg"
@@ -286,10 +291,41 @@
                                             <span
                                                 class="en_menu font-metal absolute block whitespace-nowrap text-[#AF913B] text-[2rem] font-normal tracking-[0em]">Gallery</span>
                                         </div>
+                                        <img src="assets/img/arrow_down.svg"
+                                            class="arrow_down transition-all duration-800 w-[2.2rem] lg:hidden block"
+                                            alt="">
                                     </a>
+                                    <div
+                                        class="dropdown-content lg:absolute static lg:left-[50%] lg:translate-x-[-50%] lg:top-[calc(100%+2rem)] transition-all duration-800 ease-in-out lg:opacity-0 lg:invisible lg:max-h-[100rem] max-h-[0] overflow-auto">
+                                        <ul
+                                            class="lg:bg-[rgba(92,20,22,0.9)] bg-[#f1f1f1] md:rounded-[0] rounded-[0.5rem]">
+                                            <li>
+                                                <a href="#"
+                                                    class="text-[1.4rem] font-tc px-[4rem] whitespace-nowrap transition-[0.5s] lg:text-white text-black h-[4.8rem] flex items-center justify-center hover:opacity-[0.5] lg:border-b-[0] border-b-[0.1rem] border-b-[#ddd] lg:hover:text-[#AF913B] lg:hover:bg-[#303030]">婚紗攝影 Pre-wedding</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="text-[1.4rem] font-tc px-[4rem] whitespace-nowrap transition-[0.5s] lg:text-white text-black h-[4.8rem] flex items-center justify-center hover:opacity-[0.5] lg:border-b-[0] border-b-[0.1rem] border-b-[#ddd] lg:hover:text-[#AF913B] lg:hover:bg-[#303030]">海外婚紗 Overseas</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="text-[1.4rem] font-tc px-[4rem] whitespace-nowrap transition-[0.5s] lg:text-white text-black h-[4.8rem] flex items-center justify-center hover:opacity-[0.5] lg:border-b-[0] border-b-[0.1rem] border-b-[#ddd] lg:hover:text-[#AF913B] lg:hover:bg-[#303030]">全家福照 Family</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="text-[1.4rem] font-tc px-[4rem] whitespace-nowrap transition-[0.5s] lg:text-white text-black h-[4.8rem] flex items-center justify-center hover:opacity-[0.5] lg:border-b-[0] border-b-[0.1rem] border-b-[#ddd] lg:hover:text-[#AF913B] lg:hover:bg-[#303030]">個人寫真 Personal</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="text-[1.4rem] font-tc px-[4rem] whitespace-nowrap transition-[0.5s] lg:text-white text-black h-[4.8rem] flex items-center justify-center hover:opacity-[0.5] lg:border-b-[0] border-b-[0.1rem] border-b-[#ddd] lg:hover:text-[#AF913B] lg:hover:bg-[#303030]">孕婦寫真 Maternity</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </li>
-                                <li class="lg:w-fit w-full lg:border-b-[0rem] border-b border-b-[#ddd]">
-                                    <a href="#" class="menu_link lg:h-[9.4rem] h-[6.5rem] w-full flex items-center">
+                                <li
+                                    class="lg:w-fit w-full lg:border-b-[0rem] border-b border-b-[#ddd] dropdown relative">
+                                    <a href="#"
+                                        class="dropdown-btn menu_link lg:h-[9.4rem] h-[6.5rem] flex items-center lg:justify-start justify-between">
                                         <div
                                             class="menu_link_inner relative w-[7.7rem] h-[2.8rem] flex items-center justify-center">
                                             <img src="assets/img/menu_angle.svg"
@@ -300,7 +336,25 @@
                                             <span
                                                 class="en_menu font-metal absolute block whitespace-nowrap text-[#AF913B] text-[2rem] font-normal tracking-[0em]">Wedding</span>
                                         </div>
+                                        <img src="assets/img/arrow_down.svg"
+                                            class="arrow_down transition-all duration-800 w-[2.2rem] lg:hidden block"
+                                            alt="">
                                     </a>
+                                    <div
+                                        class="dropdown-content lg:absolute static lg:left-[50%] lg:translate-x-[-50%] lg:top-[calc(100%+2rem)] transition-all duration-800 ease-in-out lg:opacity-0 lg:invisible lg:max-h-[100rem] max-h-[0] overflow-auto">
+                                        <ul
+                                            class="lg:bg-[rgba(92,20,22,0.9)] bg-[#f1f1f1] md:rounded-[0] rounded-[0.5rem]">
+                                            <li>
+                                                <a href="#"
+                                                    class="text-[1.4rem] font-tc px-[4rem] whitespace-nowrap transition-[0.5s] lg:text-white text-black h-[4.8rem] flex items-center justify-center hover:opacity-[0.5] lg:border-b-[0] border-b-[0.1rem] border-b-[#ddd] lg:hover:text-[#AF913B] lg:hover:bg-[#303030]">婚禮攝影 Photography</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="text-[1.4rem] font-tc px-[4rem] whitespace-nowrap transition-[0.5s] lg:text-white text-black h-[4.8rem] flex items-center justify-center hover:opacity-[0.5] lg:border-b-[0] border-b-[0.1rem] border-b-[#ddd] lg:hover:text-[#AF913B] lg:hover:bg-[#303030]">新娘秘書 Styling</a>
+                                            </li>
+                                          
+                                        </ul>
+                                    </div>
                                 </li>
                                 <li class="lg:w-fit w-full lg:border-b-[0rem] border-b border-b-[#ddd]">
                                     <a href="#" class="menu_link lg:h-[9.4rem] h-[6.5rem] w-full flex items-center">
@@ -449,8 +503,7 @@
                 <img src="assets/img/menu_angle.svg" class="w-[9.3rem] mx-auto" alt="">
                 <div class="flex items-center justify-center">
                     <h2 class="title1 mr-[0.5rem]">Service</h2>
-                    <span class="title2 font-tc">•</span>
-                    <p class="title2 font-tc">服務項目</p>
+                    <span class="title2 font-tc">•</span> <p class="title2 font-tc">服務項目</p>
                 </div>
             </div>
             <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-x-[0.2rem] md:gap-y-[5rem] gap-y-[2.5rem]">
@@ -459,13 +512,13 @@
                     <div class="relative z-30">
                         <img src="assets/img/service_img1.png" class="object-cover w-full h-[32rem]" alt="">
                         <span
-                            class="red_bg pointer-events-none absolute opacity-0 invisible block h-full w-full bg-[#5C141680] left-0 top-0 transition-all duration-500 z-10"></span>
+                            class="red_bg pointer-events-none absolute opacity-0 invisible block h-full w-full bg-[rgba(92,20,22,0.8)] left-0 top-0 transition-all duration-500 z-10"></span>
                         <div
-                            class="service_info_box z-20 v1 transition-all duration-500 absolute w-[calc(100%-3rem)] right-0 top-[3rem] opacity-0 invisible h-[calc(100%-3rem)] border-[#AF913B] border-l-[0.1rem] border-b-[0.1rem] border-r-0 border-t-0 rounded-bl-[3rem]">
-                            <div class="service_info flex items-center gap-[1rem] pt-[14.4rem] pl-[6.8rem]">
-                                <h5 class="text-[2.4rem] text-[#fff] font-metal leading-[1]"><em
+                            class="service_info_box z-20 v1 transition-all duration-500 absolute w-full h-full before:w-[calc(100%-3rem)] right-0 top-[3rem] opacity-0 invisible before:h-[calc(100%-3rem)]  before:border-[#AF913B]  before:border-l-[0.1rem]  before:border-b-[0.1rem]  before:border-r-0  before:border-t-0  before:rounded-bl-[3rem] before:top-0  before:right-0  before:absolute">
+                            <div class="service_info flex items-center justify-center gap-[1rem] pt-[14.4rem]">
+                                <h5 class="lg:text-[3.2rem] text-[2.8rem] text-[#fff] font-metal leading-[1]"><em
                                         class="leading-[1]">Pre-Wedding</em></h5>
-                                <span class="text-[2rem] text-[#fff] font-tc font-normal">｜ 婚紗攝影</span>
+                                <span class="text-[2rem] text-[#fff] font-tc font-bold">｜ 婚紗攝影</span>
                             </div>
                         </div>
                     </div>
@@ -473,10 +526,10 @@
                     <div class="service_info_box v2 w-[100%] px-[3rem] flex items-center mt-[-0.8rem]">
                         <span
                             class="w-[17.2rem] h-[3.2rem] border-[#AF913B] border-l-[0.1rem] border-b-[0.1rem] border-r-0 border-t-0 rounded-bl-[3rem]"></span>
-                        <div class="service_info flex items-center gap-[1rem] mt-[1.7rem] ml-[2rem]">
-                            <h5 class="text-[2.4rem] text-[#AF913B] font-metal leading-[1] whitespace-nowrap"><em
+                        <div class="service_info flex items-center gap-[1rem] mt-[1.7rem] ml-[2rem] translate-y-[0.8rem]">
+                            <h5 class="lg:text-[3.2rem] text-[2.8rem] text-[#AF913B] font-metal leading-[1] whitespace-nowrap"><em
                                     class="leading-[1]">Pre-Wedding</em></h5>
-                            <span class="text-[2rem] text-[#000000] font-tc font-normal whitespace-nowrap">｜ 婚紗攝影</span>
+                            <span class="text-[2rem] text-[#000000] font-tc whitespace-nowrap font-bold">｜ 婚紗攝影</span>
                         </div>
                     </div>
                 </div>
@@ -485,13 +538,13 @@
                     <div class="relative z-30">
                         <img src="assets/img/service_img2.png" class="object-cover w-full h-[32rem]" alt="">
                         <span
-                            class="red_bg pointer-events-none absolute opacity-0 invisible block h-full w-full bg-[#5C141680] left-0 top-0 transition-all duration-500 z-10"></span>
+                            class="red_bg pointer-events-none absolute opacity-0 invisible block h-full w-full bg-[rgba(92,20,22,0.8)] left-0 top-0 transition-all duration-500 z-10"></span>
                         <div
-                            class="service_info_box z-20 v1 transition-all duration-500 absolute w-[calc(100%-3rem)] right-0 top-[3rem] opacity-0 invisible h-[calc(100%-3rem)] border-[#AF913B] border-l-[0.1rem] border-b-[0.1rem] border-r-0 border-t-0 rounded-bl-[3rem]">
-                            <div class="service_info flex items-center gap-[1rem] pt-[14.4rem] pl-[6.8rem]">
-                                <h5 class="text-[2.4rem] text-[#fff] font-metal leading-[1]"><em
+                            class="service_info_box z-20 v1 transition-all duration-500 absolute w-full h-full before:w-[calc(100%-3rem)] right-0 top-[3rem] opacity-0 invisible before:h-[calc(100%-3rem)]  before:border-[#AF913B]  before:border-l-[0.1rem]  before:border-b-[0.1rem]  before:border-r-0  before:border-t-0  before:rounded-bl-[3rem] before:top-0  before:right-0  before:absolute">
+                            <div class="service_info flex items-center justify-center gap-[1rem] pt-[14.4rem]">
+                                <h5 class="lg:text-[3.2rem] text-[2.8rem] text-[#fff] font-metal leading-[1]"><em
                                         class="leading-[1]">Overseas</em></h5>
-                                <span class="text-[2rem] text-[#fff] font-tc font-normal">｜ 海外婚紗</span>
+                                <span class="text-[2rem] text-[#fff] font-tc font-bold">｜ 海外婚紗</span>
                             </div>
                         </div>
                     </div>
@@ -499,10 +552,10 @@
                     <div class="service_info_box v2 w-[100%] px-[3rem] flex items-center mt-[-0.8rem]">
                         <span
                             class="w-[17.2rem] h-[3.2rem] border-[#AF913B] border-l-[0.1rem] border-b-[0.1rem] border-r-0 border-t-0 rounded-bl-[3rem]"></span>
-                        <div class="service_info flex items-center gap-[1rem] mt-[1.7rem] ml-[2rem]">
-                            <h5 class="text-[2.4rem] text-[#AF913B] font-metal leading-[1] whitespace-nowrap"><em
+                        <div class="service_info flex items-center gap-[1rem] mt-[1.7rem] ml-[2rem] translate-y-[0.8rem]">
+                            <h5 class="lg:text-[3.2rem] text-[2.8rem] text-[#AF913B] font-metal leading-[1] whitespace-nowrap"><em
                                     class="leading-[1]">Overseas</em></h5>
-                            <span class="text-[2rem] text-[#000000] font-tc font-normal whitespace-nowrap">｜ 海外婚紗</span>
+                            <span class="text-[2rem] text-[#000000] font-tc whitespace-nowrap font-bold">｜ 海外婚紗</span>
                         </div>
                     </div>
                 </div>
@@ -511,13 +564,13 @@
                     <div class="relative z-30">
                         <img src="assets/img/service_img3.png" class="object-cover w-full h-[32rem]" alt="">
                         <span
-                            class="red_bg pointer-events-none absolute opacity-0 invisible block h-full w-full bg-[#5C141680] left-0 top-0 transition-all duration-500 z-10"></span>
+                            class="red_bg pointer-events-none absolute opacity-0 invisible block h-full w-full bg-[rgba(92,20,22,0.8)] left-0 top-0 transition-all duration-500 z-10"></span>
                         <div
-                            class="service_info_box z-20 v1 transition-all duration-500 absolute w-[calc(100%-3rem)] right-0 top-[3rem] opacity-0 invisible h-[calc(100%-3rem)] border-[#AF913B] border-l-[0.1rem] border-b-[0.1rem] border-r-0 border-t-0 rounded-bl-[3rem]">
-                            <div class="service_info flex items-center gap-[1rem] pt-[14.4rem] pl-[6.8rem]">
-                                <h5 class="text-[2.4rem] text-[#fff] font-metal leading-[1]"><em
+                            class="service_info_box z-20 v1 transition-all duration-500 absolute w-full h-full before:w-[calc(100%-3rem)] right-0 top-[3rem] opacity-0 invisible before:h-[calc(100%-3rem)]  before:border-[#AF913B]  before:border-l-[0.1rem]  before:border-b-[0.1rem]  before:border-r-0  before:border-t-0  before:rounded-bl-[3rem] before:top-0  before:right-0  before:absolute">
+                            <div class="service_info flex items-center justify-center gap-[1rem] pt-[14.4rem]">
+                                <h5 class="lg:text-[3.2rem] text-[2.8rem] text-[#fff] font-metal leading-[1]"><em
                                         class="leading-[1]">Bridal</em></h5>
-                                <span class="text-[2rem] text-[#fff] font-tc font-normal">｜ 婚紗禮服</span>
+                                <span class="text-[2rem] text-[#fff] font-tc font-bold">｜ 婚紗禮服</span>
                             </div>
                         </div>
                     </div>
@@ -525,10 +578,10 @@
                     <div class="service_info_box v2 w-[100%] px-[3rem] flex items-center mt-[-0.8rem]">
                         <span
                             class="w-[17.2rem] h-[3.2rem] border-[#AF913B] border-l-[0.1rem] border-b-[0.1rem] border-r-0 border-t-0 rounded-bl-[3rem]"></span>
-                        <div class="service_info flex items-center gap-[1rem] mt-[1.7rem] ml-[2rem]">
-                            <h5 class="text-[2.4rem] text-[#AF913B] font-metal leading-[1] whitespace-nowrap"><em
+                        <div class="service_info flex items-center gap-[1rem] mt-[1.7rem] ml-[2rem] translate-y-[0.8rem]">
+                            <h5 class="lg:text-[3.2rem] text-[2.8rem] text-[#AF913B] font-metal leading-[1] whitespace-nowrap"><em
                                     class="leading-[1]">Bridal</em></h5>
-                            <span class="text-[2rem] text-[#000000] font-tc font-normal whitespace-nowrap">｜ 婚紗禮服</span>
+                            <span class="text-[2rem] text-[#000000] font-tc whitespace-nowrap font-bold">｜ 婚紗禮服</span>
                         </div>
                     </div>
                 </div>
@@ -537,13 +590,13 @@
                     <div class="relative z-30">
                         <img src="assets/img/service_img4.png" class="object-cover w-full h-[32rem]" alt="">
                         <span
-                            class="red_bg pointer-events-none absolute opacity-0 invisible block h-full w-full bg-[#5C141680] left-0 top-0 transition-all duration-500 z-10"></span>
+                            class="red_bg pointer-events-none absolute opacity-0 invisible block h-full w-full bg-[rgba(92,20,22,0.8)] left-0 top-0 transition-all duration-500 z-10"></span>
                         <div
-                            class="service_info_box z-20 v1 transition-all duration-500 absolute w-[calc(100%-3rem)] right-0 top-[3rem] opacity-0 invisible h-[calc(100%-3rem)] border-[#AF913B] border-l-[0.1rem] border-b-[0.1rem] border-r-0 border-t-0 rounded-bl-[3rem]">
-                            <div class="service_info flex items-center gap-[1rem] pt-[14.4rem] pl-[6.8rem]">
-                                <h5 class="text-[2.4rem] text-[#fff] font-metal leading-[1]"><em
+                            class="service_info_box z-20 v1 transition-all duration-500 absolute w-full h-full before:w-[calc(100%-3rem)] right-0 top-[3rem] opacity-0 invisible before:h-[calc(100%-3rem)]  before:border-[#AF913B]  before:border-l-[0.1rem]  before:border-b-[0.1rem]  before:border-r-0  before:border-t-0  before:rounded-bl-[3rem] before:top-0  before:right-0  before:absolute">
+                            <div class="service_info flex items-center justify-center gap-[1rem] pt-[14.4rem]">
+                                <h5 class="lg:text-[3.2rem] text-[2.8rem] text-[#fff] font-metal leading-[1]"><em
                                         class="leading-[1]">Photography</em></h5>
-                                <span class="text-[2rem] text-[#fff] font-tc font-normal">｜ 婚禮攝影</span>
+                                <span class="text-[2rem] text-[#fff] font-tc font-bold">｜ 婚禮攝影</span>
                             </div>
                         </div>
                     </div>
@@ -551,10 +604,10 @@
                     <div class="service_info_box v2 w-[100%] px-[3rem] flex items-center mt-[-0.8rem]">
                         <span
                             class="w-[17.2rem] h-[3.2rem] border-[#AF913B] border-l-[0.1rem] border-b-[0.1rem] border-r-0 border-t-0 rounded-bl-[3rem]"></span>
-                        <div class="service_info flex items-center gap-[1rem] mt-[1.7rem] ml-[2rem]">
-                            <h5 class="text-[2.4rem] text-[#AF913B] font-metal leading-[1] whitespace-nowrap"><em
+                        <div class="service_info flex items-center gap-[1rem] mt-[1.7rem] ml-[2rem] translate-y-[0.8rem]">
+                            <h5 class="lg:text-[3.2rem] text-[2.8rem] text-[#AF913B] font-metal leading-[1] whitespace-nowrap"><em
                                     class="leading-[1]">Photography</em></h5>
-                            <span class="text-[2rem] text-[#000000] font-tc font-normal whitespace-nowrap">｜ 婚禮攝影</span>
+                            <span class="text-[2rem] text-[#000000] font-tc whitespace-nowrap font-bold">｜ 婚禮攝影</span>
                         </div>
                     </div>
                 </div>
@@ -563,13 +616,13 @@
                     <div class="relative z-30">
                         <img src="assets/img/service_img5.png" class="object-cover w-full h-[32rem]" alt="">
                         <span
-                            class="red_bg pointer-events-none absolute opacity-0 invisible block h-full w-full bg-[#5C141680] left-0 top-0 transition-all duration-500 z-10"></span>
+                            class="red_bg pointer-events-none absolute opacity-0 invisible block h-full w-full bg-[rgba(92,20,22,0.8)] left-0 top-0 transition-all duration-500 z-10"></span>
                         <div
-                            class="service_info_box z-20 v1 transition-all duration-500 absolute w-[calc(100%-3rem)] right-0 top-[3rem] opacity-0 invisible h-[calc(100%-3rem)] border-[#AF913B] border-l-[0.1rem] border-b-[0.1rem] border-r-0 border-t-0 rounded-bl-[3rem]">
-                            <div class="service_info flex items-center gap-[1rem] pt-[14.4rem] pl-[6.8rem]">
-                                <h5 class="text-[2.4rem] text-[#fff] font-metal leading-[1]"><em
+                            class="service_info_box z-20 v1 transition-all duration-500 absolute w-full h-full before:w-[calc(100%-3rem)] right-0 top-[3rem] opacity-0 invisible before:h-[calc(100%-3rem)]  before:border-[#AF913B]  before:border-l-[0.1rem]  before:border-b-[0.1rem]  before:border-r-0  before:border-t-0  before:rounded-bl-[3rem] before:top-0  before:right-0  before:absolute">
+                            <div class="service_info flex items-center justify-center gap-[1rem] pt-[14.4rem]">
+                                <h5 class="lg:text-[3.2rem] text-[2.8rem] text-[#fff] font-metal leading-[1]"><em
                                         class="leading-[1]">Styling</em></h5>
-                                <span class="text-[2rem] text-[#fff] font-tc font-normal">｜ 新娘秘書</span>
+                                <span class="text-[2rem] text-[#fff] font-tc font-bold">｜ 新娘秘書</span>
                             </div>
                         </div>
                     </div>
@@ -577,10 +630,10 @@
                     <div class="service_info_box v2 w-[100%] px-[3rem] flex items-center mt-[-0.8rem]">
                         <span
                             class="w-[17.2rem] h-[3.2rem] border-[#AF913B] border-l-[0.1rem] border-b-[0.1rem] border-r-0 border-t-0 rounded-bl-[3rem]"></span>
-                        <div class="service_info flex items-center gap-[1rem] mt-[1.7rem] ml-[2rem]">
-                            <h5 class="text-[2.4rem] text-[#AF913B] font-metal leading-[1] whitespace-nowrap"><em
+                        <div class="service_info flex items-center gap-[1rem] mt-[1.7rem] ml-[2rem] translate-y-[0.8rem]">
+                            <h5 class="lg:text-[3.2rem] text-[2.8rem] text-[#AF913B] font-metal leading-[1] whitespace-nowrap"><em
                                     class="leading-[1]">Styling</em></h5>
-                            <span class="text-[2rem] text-[#000000] font-tc font-normal whitespace-nowrap">｜ 新娘秘書</span>
+                            <span class="text-[2rem] text-[#000000] font-tc whitespace-nowrap font-bold">｜ 新娘秘書</span>
                         </div>
                     </div>
                 </div>
@@ -589,13 +642,13 @@
                     <div class="relative z-30">
                         <img src="assets/img/service_img6.png" class="object-cover w-full h-[32rem]" alt="">
                         <span
-                            class="red_bg pointer-events-none absolute opacity-0 invisible block h-full w-full bg-[#5C141680] left-0 top-0 transition-all duration-500 z-10"></span>
+                            class="red_bg pointer-events-none absolute opacity-0 invisible block h-full w-full bg-[rgba(92,20,22,0.8)] left-0 top-0 transition-all duration-500 z-10"></span>
                         <div
-                            class="service_info_box z-20 v1 transition-all duration-500 absolute w-[calc(100%-3rem)] right-0 top-[3rem] opacity-0 invisible h-[calc(100%-3rem)] border-[#AF913B] border-l-[0.1rem] border-b-[0.1rem] border-r-0 border-t-0 rounded-bl-[3rem]">
-                            <div class="service_info flex items-center gap-[1rem] pt-[14.4rem] pl-[6.8rem]">
-                                <h5 class="text-[2.4rem] text-[#fff] font-metal leading-[1]"><em
+                            class="service_info_box z-20 v1 transition-all duration-500 absolute w-full h-full before:w-[calc(100%-3rem)] right-0 top-[3rem] opacity-0 invisible before:h-[calc(100%-3rem)]  before:border-[#AF913B]  before:border-l-[0.1rem]  before:border-b-[0.1rem]  before:border-r-0  before:border-t-0  before:rounded-bl-[3rem] before:top-0  before:right-0  before:absolute">
+                            <div class="service_info flex items-center justify-center gap-[1rem] pt-[14.4rem]">
+                                <h5 class="lg:text-[3.2rem] text-[2.8rem] text-[#fff] font-metal leading-[1]"><em
                                         class="leading-[1]">Family</em></h5>
-                                <span class="text-[2rem] text-[#fff] font-tc font-normal">｜ 全家福照</span>
+                                <span class="text-[2rem] text-[#fff] font-tc font-bold">｜ 全家福照</span>
                             </div>
                         </div>
                     </div>
@@ -603,10 +656,10 @@
                     <div class="service_info_box v2 w-[100%] px-[3rem] flex items-center mt-[-0.8rem]">
                         <span
                             class="w-[17.2rem] h-[3.2rem] border-[#AF913B] border-l-[0.1rem] border-b-[0.1rem] border-r-0 border-t-0 rounded-bl-[3rem]"></span>
-                        <div class="service_info flex items-center gap-[1rem] mt-[1.7rem] ml-[2rem]">
-                            <h5 class="text-[2.4rem] text-[#AF913B] font-metal leading-[1] whitespace-nowrap"><em
+                        <div class="service_info flex items-center gap-[1rem] mt-[1.7rem] ml-[2rem] translate-y-[0.8rem]">
+                            <h5 class="lg:text-[3.2rem] text-[2.8rem] text-[#AF913B] font-metal leading-[1] whitespace-nowrap"><em
                                     class="leading-[1]">Family</em></h5>
-                            <span class="text-[2rem] text-[#000000] font-tc font-normal whitespace-nowrap">｜ 全家福照</span>
+                            <span class="text-[2rem] text-[#000000] font-tc whitespace-nowrap font-bold">｜ 全家福照</span>
                         </div>
                     </div>
                 </div>
@@ -615,13 +668,13 @@
                     <div class="relative z-30">
                         <img src="assets/img/service_img7.png" class="object-cover w-full h-[32rem]" alt="">
                         <span
-                            class="red_bg pointer-events-none absolute opacity-0 invisible block h-full w-full bg-[#5C141680] left-0 top-0 transition-all duration-500 z-10"></span>
+                            class="red_bg pointer-events-none absolute opacity-0 invisible block h-full w-full bg-[rgba(92,20,22,0.8)] left-0 top-0 transition-all duration-500 z-10"></span>
                         <div
-                            class="service_info_box z-20 v1 transition-all duration-500 absolute w-[calc(100%-3rem)] right-0 top-[3rem] opacity-0 invisible h-[calc(100%-3rem)] border-[#AF913B] border-l-[0.1rem] border-b-[0.1rem] border-r-0 border-t-0 rounded-bl-[3rem]">
-                            <div class="service_info flex items-center gap-[1rem] pt-[14.4rem] pl-[6.8rem]">
-                                <h5 class="text-[2.4rem] text-[#fff] font-metal leading-[1]"><em
+                            class="service_info_box z-20 v1 transition-all duration-500 absolute w-full h-full before:w-[calc(100%-3rem)] right-0 top-[3rem] opacity-0 invisible before:h-[calc(100%-3rem)]  before:border-[#AF913B]  before:border-l-[0.1rem]  before:border-b-[0.1rem]  before:border-r-0  before:border-t-0  before:rounded-bl-[3rem] before:top-0  before:right-0  before:absolute">
+                            <div class="service_info flex items-center justify-center gap-[1rem] pt-[14.4rem]">
+                                <h5 class="lg:text-[3.2rem] text-[2.8rem] text-[#fff] font-metal leading-[1]"><em
                                         class="leading-[1]">Personal</em></h5>
-                                <span class="text-[2rem] text-[#fff] font-tc font-normal">｜ 個人寫真</span>
+                                <span class="text-[2rem] text-[#fff] font-tc font-bold">｜ 個人寫真</span>
                             </div>
                         </div>
                     </div>
@@ -629,10 +682,10 @@
                     <div class="service_info_box v2 w-[100%] px-[3rem] flex items-center mt-[-0.8rem]">
                         <span
                             class="w-[17.2rem] h-[3.2rem] border-[#AF913B] border-l-[0.1rem] border-b-[0.1rem] border-r-0 border-t-0 rounded-bl-[3rem]"></span>
-                        <div class="service_info flex items-center gap-[1rem] mt-[1.7rem] ml-[2rem]">
-                            <h5 class="text-[2.4rem] text-[#AF913B] font-metal leading-[1] whitespace-nowrap"><em
+                        <div class="service_info flex items-center gap-[1rem] mt-[1.7rem] ml-[2rem] translate-y-[0.8rem]">
+                            <h5 class="lg:text-[3.2rem] text-[2.8rem] text-[#AF913B] font-metal leading-[1] whitespace-nowrap"><em
                                     class="leading-[1]">Personal</em></h5>
-                            <span class="text-[2rem] text-[#000000] font-tc font-normal whitespace-nowrap">｜ 個人寫真</span>
+                            <span class="text-[2rem] text-[#000000] font-tc whitespace-nowrap font-bold">｜ 個人寫真</span>
                         </div>
                     </div>
                 </div>
@@ -641,13 +694,13 @@
                     <div class="relative z-30">
                         <img src="assets/img/service_img8.png" class="object-cover w-full h-[32rem]" alt="">
                         <span
-                            class="red_bg pointer-events-none absolute opacity-0 invisible block h-full w-full bg-[#5C141680] left-0 top-0 transition-all duration-500 z-10"></span>
+                            class="red_bg pointer-events-none absolute opacity-0 invisible block h-full w-full bg-[rgba(92,20,22,0.8)] left-0 top-0 transition-all duration-500 z-10"></span>
                         <div
-                            class="service_info_box z-20 v1 transition-all duration-500 absolute w-[calc(100%-3rem)] right-0 top-[3rem] opacity-0 invisible h-[calc(100%-3rem)] border-[#AF913B] border-l-[0.1rem] border-b-[0.1rem] border-r-0 border-t-0 rounded-bl-[3rem]">
-                            <div class="service_info flex items-center gap-[1rem] pt-[14.4rem] pl-[6.8rem]">
-                                <h5 class="text-[2.4rem] text-[#fff] font-metal leading-[1]"><em
+                            class="service_info_box z-20 v1 transition-all duration-500 absolute w-full h-full before:w-[calc(100%-3rem)] right-0 top-[3rem] opacity-0 invisible before:h-[calc(100%-3rem)]  before:border-[#AF913B]  before:border-l-[0.1rem]  before:border-b-[0.1rem]  before:border-r-0  before:border-t-0  before:rounded-bl-[3rem] before:top-0  before:right-0  before:absolute">
+                            <div class="service_info flex items-center justify-center gap-[1rem] pt-[14.4rem]">
+                                <h5 class="lg:text-[3.2rem] text-[2.8rem] text-[#fff] font-metal leading-[1]"><em
                                         class="leading-[1]">Maternity</em></h5>
-                                <span class="text-[2rem] text-[#fff] font-tc font-normal">｜ 孕婦寫真</span>
+                                <span class="text-[2rem] text-[#fff] font-tc font-bold">｜ 孕婦寫真</span>
                             </div>
                         </div>
                     </div>
@@ -655,10 +708,10 @@
                     <div class="service_info_box v2 w-[100%] px-[3rem] flex items-center mt-[-0.8rem]">
                         <span
                             class="w-[17.2rem] h-[3.2rem] border-[#AF913B] border-l-[0.1rem] border-b-[0.1rem] border-r-0 border-t-0 rounded-bl-[3rem]"></span>
-                        <div class="service_info flex items-center gap-[1rem] mt-[1.7rem] ml-[2rem]">
-                            <h5 class="text-[2.4rem] text-[#AF913B] font-metal leading-[1] whitespace-nowrap"><em
+                        <div class="service_info flex items-center gap-[1rem] mt-[1.7rem] ml-[2rem] translate-y-[0.8rem]">
+                            <h5 class="lg:text-[3.2rem] text-[2.8rem] text-[#AF913B] font-metal leading-[1] whitespace-nowrap"><em
                                     class="leading-[1]">Maternity</em></h5>
-                            <span class="text-[2rem] text-[#000000] font-tc font-normal whitespace-nowrap">｜ 孕婦寫真</span>
+                            <span class="text-[2rem] text-[#000000] font-tc whitespace-nowrap font-bold">｜ 孕婦寫真</span>
                         </div>
                     </div>
                 </div>
@@ -859,11 +912,9 @@
             <div class="container">
                 <div class="section_top w-fit mx-auto lg:mb-[8rem] md:mb-[5rem] mb-[3rem] text-center">
                     <img src="assets/img/menu_angle.svg" class="w-[9.3rem] mx-auto" alt="">
-                    <div
-                        class="flex items-center justify-center lg:translate-x-[-4rem] md:translate-x-[-2rem] translate-x-[-1rem]">
+                    <div class="flex items-center justify-center">
                         <h2 class="title1 mr-[0.5rem]">Reserve Now</h2>
-                        <span class="title2 font-tc">•</span>
-                        <p class="title2 font-tc">立即預約參觀</p>
+                        <span class="title2 font-tc">•</span> <p class="title2 font-tc">立即預約參觀</p>
                     </div>
                 </div>
 
@@ -904,7 +955,7 @@
                     class="contact_form relative border border-[#AF913B] rounded-[5rem] lg:px-[23.5rem] md:px-[5rem] px-[2.5rem] lg:py-[7.5rem] md:py-[5rem] py-[3.5rem] grid md:grid-cols-2 grid-cols-1 lg:gap-[10rem] md:gap-[4rem] gap-[2rem] md:gap-y-[4rem] gap-y-[2rem]">
                     <div class="grid lg:gap-y-[4rem] md:gap-y-[2rem] gap-y-[1.5rem]  content-start">
                         <div class="form_group">
-                            <label for="name" class="text-[2rem] text-black block mb-[1.5rem]"><span
+                            <label for="name" class="text-[2rem] text-black block mb-[1.5rem] font-tc font-semibold"><span
                                     class="text-[#AF913B]">*</span>姓名
                                 NAME</label>
                             <input type="text" name="name" id="name"
@@ -912,7 +963,7 @@
                                 required>
                         </div>
                         <div class="form_group">
-                            <label for="select" class="text-[2rem] text-black block mb-[1.5rem]">方便聯絡時間</label>
+                            <label for="select" class="text-[2rem] text-black block mb-[1.5rem] font-tc font-semibold">方便聯絡時間</label>
                             <select
                                 class="nice-select ml-[1.1rem] bg-[#F8F8F8] h-[4.8rem] rounded-[1.5rem] text-center px-[2rem] w-full flex items-center justify-center outline-none border-[#F8F8F8] focus:border-[#AF913B]"
                                 name="select" id="select">
@@ -927,7 +978,7 @@
                             </select>
                         </div>
                         <div class="form_group">
-                            <label for="select" class="text-[2rem] text-black block mb-[1.5rem]">希望諮詢的服務項目(可複選)</label>
+                            <label for="select" class="text-[2rem] text-black block mb-[1.5rem] font-tc font-semibold">希望諮詢的服務項目(可複選)</label>
                             <div class="checkbox_lists grid gap-[1.2rem]">
                                 <div class="checkbox cursor-pointer flex gap-[1rem] active">
                                     <div
@@ -991,21 +1042,21 @@
 
                     <div class="grid lg:gap-y-[4rem] md:gap-y-[2rem] gap-y-[1.5rem] content-start">
                         <div class="form_group">
-                            <label for="tel" class="text-[2rem] text-black block mb-[1.5rem]"><span
+                            <label for="tel" class="text-[2rem] text-black block mb-[1.5rem] font-tc font-semibold"><span
                                     class="text-[#AF913B]">*</span>聯絡電話 Tel</label>
                             <input type="text" name="tel" id="tel"
                                 class="ml-[1.1rem] bg-[#F8F8F8] h-[4.8rem] rounded-[1.5rem] text-center px-[2rem] w-full flex items-center justify-center outline-none border-[#F8F8F8] focus:border-[#AF913B] text-[#AF913B]"
                                 required>
                         </div>
                         <div class="form_group">
-                            <label for="selectDate" class="text-[2rem] text-black block mb-[1.5rem]"><span
+                            <label for="selectDate" class="text-[2rem] text-black block mb-[1.5rem] font-tc font-semibold"><span
                                     class="text-[#AF913B]"></span>預計婚期</label>
                             <input type="text" name="selectDate" id="selectDate" placeholder="DD / MM / YY"
                                 class="ml-[1.1rem] bg-[#F8F8F8] h-[4.8rem] rounded-[1.5rem] text-center px-[2rem] w-full flex items-center justify-center outline-none border-[#F8F8F8] focus:border-[#AF913B] text-[#AF913B] placeholder:text-[#AF913B]"
                                 required>
                         </div>
                         <div class="form_group">
-                            <label for="selectDate2" class="text-[2rem] text-black block mb-[1.5rem]"><span
+                            <label for="selectDate2" class="text-[2rem] text-black block mb-[1.5rem] font-tc font-semibold"><span
                                     class="text-[#AF913B]"></span>希望來店參觀日期(可複選)</label>
                             <input type="text" name="selectDate2" id="selectDate2" placeholder="DD / MM / YY"
                                 class="ml-[1.1rem] bg-[#F8F8F8] h-[4.8rem] rounded-[1.5rem] text-center px-[2rem] w-full flex items-center justify-center outline-none border-[#F8F8F8] focus:border-[#AF913B] text-[#AF913B] placeholder:text-[#AF913B]"
@@ -1014,7 +1065,7 @@
                     </div>
 
                     <div class="form_group md:col-span-2">
-                        <label for="message" class="text-[2rem] text-black block mb-[1.5rem]"><span
+                        <label for="message" class="text-[2rem] text-black block mb-[1.5rem] font-tc font-semibold"><span
                                 class="text-[#AF913B]">備註</label>
                         <textarea
                             class="pt-[1.5rem] ml-[1.1rem] bg-[#F8F8F8] h-[9.6rem] rounded-[1.5rem] text-center px-[2rem] w-full flex items-center justify-center outline-none border-[#F8F8F8] focus:border-[#AF913B] text-[#AF913B]"
@@ -1037,7 +1088,7 @@
 
                 <div class="section_top w-fit mx-auto lg:mb-[6rem] md:mb-[3rem] mb-[2rem]  text-center">
                     <img src="assets/img/menu_angle.svg" class="w-[9.3rem] mx-auto" alt="">
-                    <p class="text-[3.2rem] text-[#5C1416] font-semibold">比堤的三大「超」寵愛</p>
+                    <p class="text-[3.2rem] text-[#5C1416] font-tc font-semibold">比堤的三大「超」寵愛</p>
                 </div>
 
                 <div class="grid lg:grid-cols-3 grid-cols-1 gap-y-[5rem]">

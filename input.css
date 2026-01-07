@@ -1,0 +1,109 @@
+/* ---------------------- Google fonts --------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Metal&family=Noto+Sans+HK:wght@100..900&family=Noto+Serif+TC:wght@200..900&display=swap");
+
+/* --------------- tailwind css ------------------*/
+
+@import "tailwindcss";
+
+@theme {
+  /* font family */
+  --font-tc: "Noto Serif TC", serif;
+  --font-hk: "Noto Sans HK", sans-serif;
+  --font-metal: "Metal", serif;
+  --transition-smooth: 0.35s;
+}
+
+/* ------------------ Global CSS ---------------------*/
+
+html {
+  /* font-size: 0.52vw; */
+  @apply lg:text-[0.520vw] md:text-[55%] text-[2.32vw];
+}
+
+body {
+  @apply font-hk font-normal md:text-[1.6rem] text-[1.5rem] tracking-[0.095em] leading-[1.45] text-[#4D4D4D] bg-white;
+}
+
+/* container */
+.container {
+  @apply mx-auto px-[2rem] lg:max-w-[145rem] md:max-w-[76.8rem] max-w-[64rem];
+}
+
+.menu_container {
+  @apply mx-auto px-[2rem] lg:max-w-fit md:max-w-[76.8rem] max-w-[64rem];
+}
+
+/* title1 */
+.title1 {
+  @apply font-metal font-normal md:text-[6.3rem] text-[3.6rem] leading-[1] tracking-[0] text-[#000000];
+}
+
+/* title2 */
+.title2 {
+  @apply font-tc font-semibold md:text-[3.2rem] text-[2.8rem] leading-[1] tracking-[0.1em] text-[#AF913B];
+}
+
+/* title32 */
+.title32 {
+  @apply font-semibold md:text-[3.2rem] text-[2.8rem] leading-[1] tracking-[0.1em];
+}
+
+/* title24 */
+.title24 {
+  @apply text-[2.4rem] text-[#000000] font-semibold;
+}
+
+/* heading */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply block tracking-normal;
+}
+
+/* btn */
+.btn {
+  @apply inline-flex items-center justify-center px-[3rem] md:min-w-[16.3rem] min-w-[14rem] md:h-[6.4rem] h-[5rem] transition-all duration-350 gap-[1rem] before:size-[calc(100%-0.4rem)] before:rounded-full before:absolute before:border before:border-[#AF913B] relative rounded-full bg-[#5C1416] hover:bg-[#303030] font-tc font-medium md:text-[1.6rem] text-[1.5rem] tracking-[0.095em] text-white hover:text-[#AF913B] no-underline;
+}
+
+.btn img {
+  @apply object-contain transition-all duration-350;
+}
+
+.btn.yellow {
+  @apply bg-[#AF913B] before:border-white hover:before:border-[#AF913B]  hover:text-[#AF913B] hover:bg-[#303030];
+}
+
+.btn.black {
+  @apply bg-[#000000] hover:bg-[#303030];
+}
+
+.btn:hover img {
+  filter: brightness(0) saturate(100%) invert(47%) sepia(86%) saturate(308%)
+    hue-rotate(7deg) brightness(104%) contrast(90%);
+}
+
+/* checkbox */
+.checkbox.active .check {
+  @apply bg-[#AF913B] border-[#AF913B];
+}
+
+.section_top div {
+  @apply relative mt-[0.8rem] translate-x-0 translate-y-0 mx-auto w-fit;
+}
+
+.section_top div h2 {
+  @apply absolute right-[3rem] whitespace-nowrap;
+}
+
+.section_top div p {
+  @apply absolute whitespace-nowrap left-[3rem];
+}
+@media (min-width: 1024px) {
+  .scrollbar_none::-webkit-scrollbar {
+    scrollbar-width: 0;
+    display: none;
+  }
+}

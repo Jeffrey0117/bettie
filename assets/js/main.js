@@ -154,40 +154,73 @@ $(document).ready(function () {
         }
     });
 
+    // bridal_slider
+    swiper = new Swiper(".bridal_slider", {
+        slidesPerView: 'auto',
+        loop: true,
+        speed: 700,
+        rtl: true,
+
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false
+        },
+
+        navigation: {
+            nextEl: ".wedding_dress .swiper_button_next",
+            prevEl: ".wedding_dress .swiper_button_prev"
+        },
+
+        // 🔥 Mobile-first
+        centeredSlides: true,
+
+        breakpoints: {
+            768: {
+                centeredSlides: false
+            }
+        }
+    });
+
+
+
+    $(document).ready(function () {
+
+        // Toggle dropdown
+        $('.nav_tabs > button').on('click', function (e) {
+            e.stopPropagation();
+            $(this).siblings('.nav_tab_list').toggleClass('active');
+            $(this).toggleClass('active');
+        });
+
+        // Click on dropdown item
+        $('.nav_tab_list .nav_tab').on('click', function () {
+            const tabId = $(this).attr('id');
+            const tabText = $(this).text();
+
+            // Update active nav
+            $(this).addClass('active').siblings().removeClass('active');
+
+            // Update selected text
+            $('.selected_nav_text').text(tabText);
+
+            // Switch tab content
+            $('.tab_pane').hide();
+            $('.tab_pane[data-tab-pane="' + tabId + '"]').show();
+
+            // Close dropdown
+            $(this).closest('.nav_tab_list').removeClass('active');
+        });
+
+        // Close dropdown when clicking outside
+        $(document).on('click', function () {
+            $('.nav_tab_list').removeClass('active');
+            $('.nav_tabs > button').removeClass('active');
+        });
+
+    });
 
     // niceSelect
     $('.nice-select').niceSelect();
 
-
-
-    // flatpickr("#selectDate1", {
-    //     dateFormat: "Y-m-d",
-    //     monthSelectorType: isMobile ? "dropdown" : "static", // mobile: dropdown, desktop: inline
-    //     yearSelectorType: isMobile ? "dropdown" : "static",
-    //     disableMobile: false, // enables native mobile datepicker if true
-    //     static: !isMobile, // if false, popup aligns below input (better for small screens)
-    // });
-
-
-    // date_pick_form
-    // $(document).on("click", ".date_pick_form", function (e) {
-    //     e.stopPropagation(); // prevent body click from firing
-    //     $(".date_pick_form").not(this).removeClass("open");
-    //     $(this).addClass("open");
-    // });
-
-    // $(document).on("click", "body", function () {
-    //     $(".date_pick_form").removeClass("open");
-    // });
-
-
-    // fillter_toggle
-    // $('.fillter_toggle').on("click", function (e) {
-    //     $('.fillter_boxes_sm').toggleClass("active");
-    // });
-
-
-
-
-})
+});
 
