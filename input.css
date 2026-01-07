@@ -101,9 +101,20 @@ h6 {
 .section_top div p {
   @apply absolute whitespace-nowrap left-[3rem];
 }
+
 @media (min-width: 1024px) {
   .scrollbar_none::-webkit-scrollbar {
     scrollbar-width: 0;
     display: none;
   }
+}
+
+
+/* Update */
+.dropdown-content a.active {
+  @apply lg:text-[#AF913B] lg:bg-[#303030] opacity-[0.5];
+}
+
+.menu_link_inner span {
+  @apply tracking-[0.1em] mt-[0.5rem] leading-[1]
 }
